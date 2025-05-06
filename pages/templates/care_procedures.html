@@ -1,0 +1,652 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уходовые процедуры</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
+
+</head>
+<body>
+
+<section class="container-decorative-about-header-img">
+    <img src="{% static 'img/Frame care.png' %}" class="decorative-1-about-header">
+</section>
+
+<section class="container-decorative-2-about-header-img">
+    <img src="{% static 'img/Vector.png' %}" class="decorative-2-about-header">
+</section>
+
+<header class="container-fluid">
+    <div class="container d-flex justify-content-between align-items-center">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div>
+            <img src="{% static 'img/Logo.png' %}" alt="Логотип" width="51" height="37">
+        </div>
+    </a>
+
+    <!-- Навигация по центру -->
+    <nav class="d-flex justify-content-center" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav">
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none;">
+                Услуги <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none;">Аппартная косметология</a></li>
+                <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none;">Уходовые процедуры</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none;">
+                О нас <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about' %}" style="outline: none;">О клинике</a></li>
+                <li><a class="dropdown-item" href="{% url 'licenses' %}" style="outline: none;">Юридическая информация</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}" style="outline: none;">Контакты</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'vacancies' %}">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news' %}">Блог</a></li>
+        </ul>
+    </nav>
+
+    <!-- Телефон и иконка справа -->
+    <div class="d-flex align-items-center right-header" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <a href="#" class="phone">+7 (914) 731-25-55</a>
+            <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+            <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            <div class="devisor"></div>
+            <a href="#" class="btn-header">Записаться</a>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+
+
+    </header>
+
+
+<section class="container main-container">
+    <h1 style="font-family: 'Prata', serif;">УХОДОВЫЕ<br>ПРОЦЕДУРЫ</h1>
+    <p class="main-p">Регулярный уход за кожей лица и тела - залог их здоровья и молодости. Наши специалисты подберут для вас индивидуальную программу процедур, которая поможет сохранить красоту и сияние вашей кожи</p>
+    <div class="d-flex div-main-btn align-items-center">
+        <button class="main-btn">Записаться онлайн</button>
+        <img src="{% static 'img/socials.png' %}" width="54" height="54">
+    </div>
+    <div class="row mt-5 align-items-start">
+  <div class="col-md-3">
+    <span style="font-size: 22px; font-family: 'Prata', serif;">НАМ ДОВЕРЯЮТ</span>
+    <p style="font-size: 16px;">
+      Ежемесячно мы помогаем обрести здоровье и красоту более 200 пациентам
+    </p>
+  </div>
+
+  <!-- Первая половина разделителя: пустая колонка для отступа -->
+  <div class="divider-vertical"></div>
+
+  <div class="col-md-3">
+    <span style="font-size: 22px; font-family: 'Prata', serif;">ОТЗЫВЫ</span>
+    <div class="d-flex align-items-center">
+        <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
+        <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
+        <span style="font-size: 16px; margin-right: 23px; font-weight: 600;">4.0</span>
+
+        <img src="{% static 'img/2gis.png' %}" width="28" height="28" style="margin-right: 10px;">
+        <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
+        <span style="font-size: 16px; font-weight: 600;" class="d-flex align-items-center">4.9</span>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="container container-services">
+     <p style="font-size: 40px; font-family: 'Prata', serif;" class="text-center">ПРОЦЕДУРЫ</p>
+    <div class="d-flex align-items-start" style="gap: 40px; margin-top: 50px;">
+        <div style="flex: 2;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+            <hr style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="d-flex align-items-center justify-content-between">
+                <span style="font-size: 18px; font-weight: 600;">Фотоомоложение</span>
+                <span style="font-size: 16px;">9 000 ₽</span>
+            </div>
+        </div>
+        <div class="card-procedures-reclama" style="flex: 1;">
+            <p>Вы можете записаться на необходимую процедуру или оставить заявку если у вас возникли вопросы, с вами свяжутся наши специалисты и проконсультирую по возникшим вопросам !</p>
+            <div class="d-flex div-main-btn align-items-center">
+        <button class="main-btn">Записаться онлайн</button>
+        <img src="{% static 'img/socials.png' %}" width="54" height="54">
+    </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container container-specialists">
+    <p style="font-size: 36px; font-family: 'Prata', serif;" class="text-center">СПЕЦИАЛИСТЫ УХОДОВОЙ ПРОЦЕДУРЫ</p>
+    <div class="d-flex justify-content-between align-items-center" style="margin-top: 54px;">
+        <div class="col-md-8">
+            <span style="font-size: 16px;">Наша команда клиники состоит из специалистов с профильным образованием, которые обладают глубокими знаниями и навыками в своей области. Все они прошли специализированное обучение и имеют необходимую квалификацию</span>
+        </div>
+        <div class="col-md-4 text-end">
+        <!-- Кнопки навигации для слайдера -->
+        <button class="slick-prev-custom prev-specialists me-3" aria-label="Previous" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+<path d="M17 6.74074C17.4091 6.74074 17.7407 6.4091 17.7407 6C17.7407 5.5909 17.4091 5.25926 17 5.25926L17 6.74074ZM0.213627 5.47622C-0.0756511 5.76549 -0.0756512 6.2345 0.213627 6.52378L4.92767 11.2378C5.21695 11.5271 5.68596 11.5271 5.97524 11.2378C6.26451 10.9485 6.26451 10.4795 5.97524 10.1903L1.78498 6L5.97524 1.80974C6.26451 1.52046 6.26451 1.05145 5.97524 0.762171C5.68596 0.472894 5.21695 0.472894 4.92767 0.762171L0.213627 5.47622ZM17 6L17 5.25926L0.73741 5.25926L0.73741 6L0.73741 6.74074L17 6.74074L17 6Z" fill="white"/>
+</svg>
+        </button>
+        <button class="slick-next-custom next-specialists" aria-label="Next" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+<path d="M1 5.25926C0.5909 5.25926 0.259259 5.5909 0.259259 6C0.259259 6.4091 0.5909 6.74074 1 6.74074V5.25926ZM17.7864 6.52378C18.0757 6.23451 18.0757 5.76549 17.7864 5.47622L13.0723 0.762172C12.7831 0.472895 12.314 0.472895 12.0248 0.762172C11.7355 1.05145 11.7355 1.52046 12.0248 1.80974L16.215 6L12.0248 10.1903C11.7355 10.4795 11.7355 10.9486 12.0248 11.2378C12.314 11.5271 12.7831 11.5271 13.0723 11.2378L17.7864 6.52378ZM1 6V6.74074L17.2626 6.74074V6V5.25926L1 5.25926V6Z" fill="white"/>
+</svg>
+        </button>
+    </div>
+    </div>
+    <div class="specialists-slider" style="margin-top: 30px;">
+        <div class="col-12 me-2">
+            <div class="card card-specialists">
+                    <div class="position-relative">
+                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
+                        <div class="position-absolute bottom-0 px-3">
+                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
+                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
+</svg></button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 me-2">
+            <div class="card card-specialists">
+                    <div class="position-relative">
+                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
+                        <div class="position-absolute bottom-0 px-3">
+                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
+                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
+</svg></button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 me-2">
+            <div class="card card-specialists">
+                    <div class="position-relative">
+                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
+                        <div class="position-absolute bottom-0 px-3">
+                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
+                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
+</svg></button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 me-2">
+            <div class="card card-specialists">
+                    <div class="position-relative">
+                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
+                        <div class="position-absolute bottom-0 px-3">
+                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
+                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
+</svg></button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-12 me-2">
+            <div class="card card-specialists">
+                    <div class="position-relative">
+                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
+                        <div class="position-absolute bottom-0 px-3">
+                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
+                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
+</svg></button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="container container-more-services">
+    <p style="font-size: 36px; font-family: 'Prata', serif;" class="text-center">ТАКЖЕ МОЖЕТ БЫТЬ ИНТЕРЕСНО</p>
+    <div class="d-flex row" style="row-gap: 20px; margin-top: 50px;">
+        <div class="col-md-4">
+            <div class="card card-service">
+                    <span style="font-size: 22px; font-family: 'Prata', serif;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
+                    <p style="font-size: 16px; margin-top: 20px;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
+                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
+                        <a href="#">
+                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;">
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-service">
+                    <span style="font-size: 22px; font-family: 'Prata', serif;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
+                    <p style="font-size: 16px; margin-top: 20px;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
+                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
+                        <a href="#">
+                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;">
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-service">
+                    <span style="font-size: 22px; font-family: 'Prata', serif;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
+                    <p style="font-size: 16px; margin-top: 20px;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
+                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
+                        <a href="#">
+                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;">
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container container-questions">
+    <p style="font-size: 48px; font-family: 'Prata', serif;" class="text-center">ОТВЕТЫ НА ВОПРОСЫ</p>
+    <div class="d-flex row">
+        <div class="col-md-6">
+    <div class="accordion" id="myAccordion">
+
+        <div class="accordion-item mb-4">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    С какого возраста можно начинать колоть инъекции?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                    Ответ
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" style="margin-bottom: 20px;">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    С какого возраста можно начинать колоть инъекции?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                    Ответ
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item" style="margin-bottom: 20px;">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    С какого возраста можно начинать колоть инъекции?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                    Ответ
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" style="margin-bottom: 20px;">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    С какого возраста можно начинать колоть инъекции?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                    Ответ
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="col-md-6">
+            <p style="font-size: 30px; font-family: 'Prata', serif;">КЛИНИКА НА КАРТЕ</p>
+            <div class="d-flex align-items-center">
+                <img src="{% static 'img/Subtract.png' %}" width="11" height="14" style="margin-right: 5px;">
+                <span style="font-size: 16px;">г. Владивосток, ул. Улица Кирова, 25е</span>
+            </div>
+            <div class="map-container" style="border-radius: 25px; overflow: hidden; margin-top: 10px">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.123456789!2d30.523456789!3d50.4506789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf123456789%3A0x123456789abcde!2z0J_Qu9C-0YnQsNC00Ywg0LLRg9C7!5e0!3m2!1suk!2sua!4v1234567890123"
+                width="650"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid container-feedback-fluid">
+    <div class="container container-feedback">
+    <div class="card card-feedback">
+    <div class="d-flex row">
+            <div class="col-md-6">
+                <p style="font-size: 40px; font-family: 'Prata', serif;">НАПИШИТЕ НАМ</p>
+                <p style="font-size: 16px; margin-top: 20px;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
+                <div class="d-flex align-items-center" style="margin-top: 30px;">
+                    <img src="{% static 'img/_5068681 1.png' %}" width="17" height="17" style="margin-right: 12px;">
+                    <span style="font-size: 16px;">Idealogia@mail.ru</span>
+                </div>
+                <div class="d-flex align-items-center" style="margin-top: 20px;">
+                    <img src="{% static 'img/Union.png' %}" width="14" height="14" style="margin-right: 12px;">
+                    <span style="font-size: 16px;">10:00 – 21:00 вт-сб</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+    <form>
+        <!-- Первая строка - имя и телефон -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control custom-input" placeholder="Имя" required>
+            </div>
+            <div class="col-md-6">
+                <input type="tel" class="form-control custom-input" placeholder="Телефон" required>
+            </div>
+        </div>
+
+        <!-- Поле сообщения -->
+        <div class="mb-3">
+            <textarea class="form-control custom-textarea" placeholder="Сообщение" rows="3"></textarea>
+        </div>
+
+        <!-- Чекбокс -->
+        <div class="form-check mb-3 d-flex align-items-center">
+            <input class="form-check-input custom-check" type="checkbox" id="agreeCheck" required checked>
+            <label class="form-check-label" for="agreeCheck" style="font-size: 16px;">
+                Согласие на обработку персональных данных
+            </label>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="submit" class="btn-feedback">Отправить</button>
+    </form>
+</div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="container-fluid container-decor-feedback">
+
+</section>
+
+<footer class="container-fluid">
+    <div class="container">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'img/Frame 76.png' %}" alt="Логотип" width="51" height="37" style="margin-right: 23px;">
+            <img src="{% static 'img/Frame 74.png' %}">
+        </div>
+    </a>
+
+    <!-- Навигация по центру -->
+    <nav class="d-flex justify-content-end" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav">
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Услуги</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'licenses' %}">О клинике</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+</div>
+        <hr style="color: white; margin-top: 30px;">
+        <div class="d-flex justify-content-between align-items-center" style="width: 100%; margin-top: 30px;">
+            <a href="#" style="color: white; text-decoration: revert;">Политика обработки персональных данных</a>
+            <div class="d-flex align-items-center">
+                <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+                <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    var slider = $('.specialists-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    // Кастомные стрелки
+    $('.prev-specialists').click(function(){
+        slider.slick('slickPrev');
+    });
+
+    $('.next-specialists').click(function(){
+        slider.slick('slickNext');
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    var slider_offer = $('.offer-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    slider_offer.on('afterChange', function(event, slick, currentSlide) {
+    updatePageIndicators(currentSlide);
+    });
+
+    function updatePageIndicators(currentSlide) {
+    $('.page-indicator').removeClass('active');
+
+    for (let i = 0; i < 3; i++) {
+        let index = currentSlide + i;
+        if (index >= 0 && index < $('.page-indicator').length) {
+            $('.page-indicator[data-index="' + index + '"]').addClass('active');
+        }
+    }
+    }
+
+    $('.prev-offer').click(function(){
+        slider_offer.slick('slickPrev');
+    });
+
+    $('.next-offer').click(function(){
+        slider_offer.slick('slickNext');
+    });
+
+    $(document).ready(function() {
+        updatePageIndicators(0);
+    });
+
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+    var slider_abonement = $('.abonement-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    slider_abonement.on('afterChange', function(event, slick, currentSlide) {
+    updatePageIndicatorsAbonement(currentSlide);
+    });
+
+    function updatePageIndicatorsAbonement(currentSlide) {
+    $('.page-indicator-abonement').removeClass('active');
+
+    for (let i = 0; i < 2; i++) {
+        let index = currentSlide + i;
+        if (index >= 0 && index < $('.page-indicator-abonement').length) {
+            $('.page-indicator-abonement[data-index="' + index + '"]').addClass('active');
+        }
+    }
+    }
+
+    $('.prev-abonement').click(function(){
+        slider_abonement.slick('slickPrev');
+    });
+
+    $('.next-abonement').click(function(){
+        slider_abonement.slick('slickNext');
+    });
+
+    $(document).ready(function() {
+        updatePageIndicatorsAbonement(0);
+    });
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+</head>
+<body>
+<header class="container-fluid" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div>
+            <img src="{% static 'img/Logo.png' %}" alt="Логотип" width="51" height="37">
+        </div>
+    </a>
+
+    <!-- Навигация по центру -->
+    <nav class="d-flex justify-content-center" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav">
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none;">
+                Услуги <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none;">Аппартная косметология</a></li>
+                <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none;">Уходовые процедуры</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none;">
+                О нас <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about' %}" style="outline: none;">О клинике</a></li>
+                <li><a class="dropdown-item" href="{% url 'licenses' %}" style="outline: none;">Юридическая информация</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}" style="outline: none;">Контакты</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'vacancies' %}">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news' %}">Блог</a></li>
+        </ul>
+    </nav>
+
+    <!-- Телефон и иконка справа -->
+    <div class="d-flex align-items-center right-header" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <a href="#" class="phone-black">+7 (914) 731-25-55</a>
+            <img src="{% static 'img/Vector-black.png' %}" width="21" height="14" class="vk">
+            <img src="{% static 'img/Vector-tg-black.png' %}" width="18" height="18">
+            <div class="devisor-black"></div>
+            <a href="#" class="btn-header-black">Записаться</a>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+
+
+    </header>
+
+<section class="container container-stock-crumbs">
+    <span><a href="/" style="font-size: 16px; color: #6E6E6E;">Главная</a> / <a href="{{ request.path }}" style="font-size: 16px; color: black;">Вакансии</a></span>
+</section>
+
+<section class="container container-vacancies">
+    <p style="font-size: 35px; font-family: 'Prata', serif;">ОТКРЫТЫЕ ВАКАНСИИ</p>
+    <div class="d-flex align-items-start" style="margin-top: 25px; gap: 300px;">
+        <span style="font-size: 18px; width: 734px;">Наш успех обусловлен приверженностью качеству и пациентоориентированности. В связи с растущим спросом на наши услуги, мы ищем квалифицированных и мотивированных специалистов в нашу команду</span>
+        <div class="card-vacancies-reclama">
+            <div class="d-flex align-items-center" style="gap: 30px;">
+                <span style="font-size: 14px; width: 236px;">Также вы можете посмотреть наши вакансии на популярных площадках по подбору персонала</span>
+                <img src="{% static 'img/Frame 2087325922.png' %}" width="50" height="50">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex row" style="margin-top: 50px;">
+        <div class="col-md-4">
+            <div class="card-vacancies">
+            <p style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖИСТ</p>
+            <p style="font-size: 16px; font-weight: 600; margin-top: 30px;">Требования к работнку:</p>
+            <span style="font-size: 16px;">Опыт: 2-3 года</span>
+            <p style="font-size: 16px;">Профильное образование</p>
+            <p style="font-size: 16px; color: #6E6E6E;">Для получения более подробной информации о вакансии, пожалуйста, свяжитесь с нами</p>
+            <div class="d-flex align-items-center" style="margin-top: 30px; gap: 10px;">
+                <a href="#" class="d-flex align-items-center" style="gap: 10px;">
+                <span style="font-size: 16px; color: #968577; font-weight: 600;">Откликнуться</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+<path d="M0.625003 8.93309C0.267276 9.14019 0.145173 9.59808 0.352278 9.95581C0.559383 10.3135 1.01727 10.4356 1.375 10.2285L0.625003 8.93309ZM12.3663 3.61183C12.4728 3.21243 12.2354 2.80232 11.836 2.69581L5.32746 0.960202C4.92806 0.853697 4.51795 1.09113 4.41144 1.49053C4.30494 1.88992 4.54237 2.30004 4.94177 2.40654L10.7271 3.94931L9.18437 9.73468C9.07787 10.1341 9.3153 10.5442 9.7147 10.6507C10.1141 10.7572 10.5242 10.5198 10.6307 10.1204L12.3663 3.61183ZM1 9.58081L1.375 10.2285L12.0182 4.06671L11.6432 3.41898L11.2682 2.77126L0.625003 8.93309L1 9.58081Z" fill="#968577"/>
+</svg>
+                </a>
+            </div>
+                </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-vacancies">
+            <p style="font-size: 22px; font-family: 'Prata', serif;">КОСМЕТИК - ЭСТЕТИСТ</p>
+            <p style="font-size: 16px; font-weight: 600; margin-top: 30px;">Требования к работнку:</p>
+            <span style="font-size: 16px;">Опыт: 2-3 года</span>
+            <p style="font-size: 16px;">Профильное образование</p>
+            <p style="font-size: 16px; color: #6E6E6E;">Для получения более подробной информации о вакансии, пожалуйста, свяжитесь с нами</p>
+            <div class="d-flex align-items-center" style="margin-top: 30px; gap: 10px;">
+                <a href="#" class="d-flex align-items-center" style="gap: 10px;">
+                <span style="font-size: 16px; color: #968577; font-weight: 600;">Откликнуться</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+<path d="M0.625003 8.93309C0.267276 9.14019 0.145173 9.59808 0.352278 9.95581C0.559383 10.3135 1.01727 10.4356 1.375 10.2285L0.625003 8.93309ZM12.3663 3.61183C12.4728 3.21243 12.2354 2.80232 11.836 2.69581L5.32746 0.960202C4.92806 0.853697 4.51795 1.09113 4.41144 1.49053C4.30494 1.88992 4.54237 2.30004 4.94177 2.40654L10.7271 3.94931L9.18437 9.73468C9.07787 10.1341 9.3153 10.5442 9.7147 10.6507C10.1141 10.7572 10.5242 10.5198 10.6307 10.1204L12.3663 3.61183ZM1 9.58081L1.375 10.2285L12.0182 4.06671L11.6432 3.41898L11.2682 2.77126L0.625003 8.93309L1 9.58081Z" fill="#968577"/>
+</svg>
+                </a>
+            </div>
+                </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+<section class="container-fluid container-feedback-fluid">
+    <div class="container container-feedback">
+    <div class="card card-feedback">
+    <div class="d-flex row">
+            <div class="col-md-6">
+                <p style="font-size: 40px; font-family: 'Prata', serif;">НАПИШИТЕ НАМ</p>
+                <p style="font-size: 16px; margin-top: 20px;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
+                <div class="d-flex align-items-center" style="margin-top: 30px;">
+                    <img src="{% static 'img/_5068681 1.png' %}" width="17" height="17" style="margin-right: 12px;">
+                    <span style="font-size: 16px;">Idealogia@mail.ru</span>
+                </div>
+                <div class="d-flex align-items-center" style="margin-top: 20px;">
+                    <img src="{% static 'img/Union.png' %}" width="14" height="14" style="margin-right: 12px;">
+                    <span style="font-size: 16px;">10:00 – 21:00 вт-сб</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+    <form>
+        <!-- Первая строка - имя и телефон -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control custom-input" placeholder="Имя" required>
+            </div>
+            <div class="col-md-6">
+                <input type="tel" class="form-control custom-input" placeholder="Телефон" required>
+            </div>
+        </div>
+
+        <!-- Поле сообщения -->
+        <div class="mb-3">
+            <textarea class="form-control custom-textarea" placeholder="Сообщение" rows="3"></textarea>
+        </div>
+
+        <!-- Чекбокс -->
+        <div class="form-check mb-3 d-flex align-items-center">
+            <input class="form-check-input custom-check" type="checkbox" id="agreeCheck" required checked>
+            <label class="form-check-label" for="agreeCheck" style="font-size: 16px;">
+                Согласие на обработку персональных данных
+            </label>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="submit" class="btn-feedback">Отправить</button>
+    </form>
+</div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="container-fluid container-decor-feedback">
+
+</section>
+
+<footer class="container-fluid">
+    <div class="container">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'img/Frame 76.png' %}" alt="Логотип" width="51" height="37" style="margin-right: 23px;">
+            <img src="{% static 'img/Frame 74.png' %}">
+        </div>
+    </a>
+
+    <!-- Навигация по центру -->
+    <nav class="d-flex justify-content-end" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav">
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Услуги</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'licenses' %}">О клинике</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+</div>
+        <hr style="color: white; margin-top: 30px;">
+        <div class="d-flex justify-content-between align-items-center" style="width: 100%; margin-top: 30px;">
+            <a href="#" style="color: white; text-decoration: revert;">Политика обработки персональных данных</a>
+            <div class="d-flex align-items-center">
+                <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+                <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    var slider = $('.lic-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    // Кастомные стрелки
+    $('.prev-lic').click(function(){
+        slider.slick('slickPrev');
+    });
+
+    $('.next-lic').click(function(){
+        slider.slick('slickNext');
+    });
+});
+</script>
+
+</body>
+</html>
