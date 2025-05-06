@@ -697,6 +697,114 @@ a:active, a:focus {
     display: none !important;
 }
 
+.slick-arrow {
+    display: none!important;
+}
+
+.nav-mob-footer {
+    display: none!important;
+}
+
+.nav-2-mob-footer {
+    display: none!important;
+}
+
+.nav-3-footer-mob {
+    display: none!important;
+}
+
+.header-mob {
+    display: none!important;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 26px;
+  z-index: 9000;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #000;
+}
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #000;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+  bottom: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0,0,0,0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.burger-checkbox:checked ~ .mobile-nav {
+    transform: translateY(0);
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav li {
+    margin: 20px 0;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+    color: #555;
+}
+
 @media (min-width: 1200px) {
     .container-decorative-header-img img {
         width: 790px;
@@ -752,6 +860,7 @@ a:active, a:focus {
 @media (max-width: 792px) {
     .container-decorative-header-img img {
         width: 290px;
+        z-index: 8000;
     }
     .container-decorative-2-header-img {
         display: none;
@@ -972,6 +1081,78 @@ a:active, a:focus {
     }
     .end-btn-news-mob {
         justify-content: center!important;
+    }
+    .zag-questions-mob {
+        font-size: 30px!important;
+    }
+    .zag-clinica-mob {
+        font-size: 28px!important;
+    }
+    .div-clinica-mob {
+        margin-top: 50px;
+    }
+    .zag-feedback-mob {
+        font-size: 28px!important;
+    }
+    .container-feedback-fluid {
+        padding: 15px;
+        margin-top: 210px;
+        border-top-right-radius: 150px;
+        border-top-left-radius: 200px;
+    }
+    .card-feedback {
+        padding: 15px;
+    }
+    .feedback-name-field-block-mob {
+        margin-top: 30px;
+    }
+    .form-check-label {
+        font-size: 12px!important;
+    }
+    .btn-feedback {
+        font-size: 16px;
+        text-align: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nav-footer-desk {
+        display: none!important;
+    }
+    .nav-2-footer-desk {
+        display: none!important;
+    }
+    .nav-mob-footer {
+        display: flex!important;
+    }
+    .img-footer-mob {
+        width: 270px;
+    }
+    .img-2-footer-mob {
+        width: 40px;
+        height: 30px;
+    }
+    .nav-2-mob-footer {
+        display: flex!important;
+    }
+    .nav-3-footer-mob {
+        display: block!important;
+    }
+    .header-desk {
+        display: none!important;
+    }
+    .header-mob {
+        display: flex!important;
+        position: sticky;
+        top: 0px;
+        z-index: 1000;
+    }
+    .main-container {
+        margin-top: 170px;
+    }
+    .map-container iframe {
+        width: 366px;
     }
 }
 
