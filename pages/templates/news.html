@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
-<header class="container-fluid" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important;">
+<header class="container-fluid header-desk header-desk-stock" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important;">
     <div class="container d-flex justify-content-between align-items-center">
 
 
@@ -80,16 +80,78 @@
 
     </header>
 
+
+<header class="container-fluid header-mob" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important; background-color: white;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div>
+            <img src="{% static 'img/Logo.png' %}" alt="Логотип" width="51" height="37">
+        </div>
+    </a>
+
+                <div class="burger-container">
+                    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                    <label class="burger" for="burger-checkbox"></label>
+
+                    <nav class="mobile-nav">
+                    <ul style="margin-top: 50px;">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                Услуги <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none; font-size: 16px;">Аппартная косметология</a></li>
+                <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none; font-size: 16px;">Уходовые процедуры</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                О нас <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about' %}" style="outline: none; font-size: 16px;">О клинике</a></li>
+                <li><a class="dropdown-item" href="{% url 'licenses' %}" style="outline: none; font-size: 16px;">Юридическая информация</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}" style="outline: none; font-size: 16px;">Контакты</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="#" style="font-size: 16px;">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}" style="font-size: 16px;">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'vacancies' %}" style="font-size: 16px;">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news' %}" style="font-size: 16px;">Блог</a></li>
+        </ul>
+                </nav>
+                </div>
+
+
+
+</div>
+    </div>
+
+
+
+
+    </header>
+
 <section class="container container-stock-crumbs">
     <span><a href="/" style="font-size: 16px; color: #6E6E6E;">Главная</a> / <a href="{{ request.path }}" style="font-size: 16px; color: black;">Новости</a></span>
 </section>
 
 <section class="container container-news-news">
-    <p style="font-size: 35px; font-family: 'Prata', serif;">НОВОСТИ</p>
+    <p style="font-size: 35px; font-family: 'Prata', serif;" class="zag-work-mob">НОВОСТИ</p>
     <div class="d-flex row" style="margin-top: 50px; row-gap: 30px;">
         <div class="col-md-6">
             <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start" style="gap: 21px;">
+        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
             <div>
                 <p style="font-size: 16px; font-weight: 600;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
                 <p style="font-size: 14px;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
@@ -112,7 +174,7 @@
 
         <div class="col-md-6">
             <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start" style="gap: 21px;">
+        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
             <div>
                 <p style="font-size: 16px; font-weight: 600;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
                 <p style="font-size: 14px;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
@@ -135,7 +197,7 @@
 
         <div class="col-md-6">
             <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start" style="gap: 21px;">
+        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
             <div>
                 <p style="font-size: 16px; font-weight: 600;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
                 <p style="font-size: 14px;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
@@ -158,7 +220,7 @@
 
         <div class="col-md-6">
             <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start" style="gap: 21px;">
+        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
             <div>
                 <p style="font-size: 16px; font-weight: 600;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
                 <p style="font-size: 14px;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
@@ -177,6 +239,10 @@
             <span style="font-size: 14px; color: #323231B2;">7 октября 2023 г.</span>
         </div>
     </div>
+            <div class="d-flex justify-content-end end-btn-news-news-mob" style="margin-top: 64px;">
+
+                <a href="#" class="more-news-btn">Больше новостей</a>
+            </div>
         </div>
     </div>
 
@@ -189,7 +255,7 @@
     <div class="card card-feedback">
     <div class="d-flex row">
             <div class="col-md-6">
-                <p style="font-size: 40px; font-family: 'Prata', serif;">НАПИШИТЕ НАМ</p>
+                <p style="font-size: 40px; font-family: 'Prata', serif;" class="zag-feedback-mob">НАПИШИТЕ НАМ</p>
                 <p style="font-size: 16px; margin-top: 20px;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
                 <div class="d-flex align-items-center" style="margin-top: 30px;">
                     <img src="{% static 'img/_5068681 1.png' %}" width="17" height="17" style="margin-right: 12px;">
@@ -203,7 +269,7 @@
             <div class="col-md-6">
     <form>
         <!-- Первая строка - имя и телефон -->
-        <div class="row mb-3">
+        <div class="row mb-3 feedback-name-field-block-mob" style="row-gap: 15px;">
             <div class="col-md-6">
                 <input type="text" class="form-control custom-input" placeholder="Имя" required>
             </div>
@@ -242,7 +308,7 @@
     <div class="container">
 
 
-            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+            <div class="d-flex justify-content-between align-items-center nav-footer-desk" style="width: 100%;">
     <!-- Логотип слева -->
     <a href="/" style="z-index: 1000;">
         <div class="d-flex align-items-center">
@@ -264,8 +330,34 @@
     </nav>
 
 </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-mob-footer" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'img/Frame 76.png' %}" alt="Логотип" width="51" height="37" style="margin-right: 23px;" class="img-2-footer-mob">
+            <img src="{% static 'img/Frame 74.png' %}" class="img-footer-mob">
+        </div>
+    </a>
+
+</div>
+
         <hr style="color: white; margin-top: 30px;">
-        <div class="d-flex justify-content-between align-items-center" style="width: 100%; margin-top: 30px;">
+
+        <div class="d-flex justify-content-between nav-2-mob-footer">
+            <nav class="d-flex row justify-content-between" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav d-flex justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'licenses' %}">О клинике</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-2-footer-desk" style="width: 100%; margin-top: 30px;">
             <a href="#" style="color: white; text-decoration: revert;">Политика обработки персональных данных</a>
             <div class="d-flex align-items-center">
                 <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
@@ -273,6 +365,18 @@
                 <img src="{% static 'img/tg.png' %}" width="18" height="18">
             </div>
         </div>
+
+        <div class="nav-3-footer-mob" style="width: 100%; margin-top: 30px;">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+                <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+            <a href="#" style="color: white; text-decoration: revert; font-size: 14px;">Политика обработки персональных данных</a>
+                </div>
+        </div>
+
     </div>
 </footer>
 

@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
-<header class="container-fluid" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important;">
+<header class="container-fluid header-desk header-desk-stock" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important;">
     <div class="container d-flex justify-content-between align-items-center">
 
 
@@ -80,23 +80,84 @@
 
     </header>
 
+<header class="container-fluid header-mob" style="border-bottom: 1px solid #E9E9E9; padding-bottom: 20px!important; background-color: white;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div>
+            <img src="{% static 'img/Logo.png' %}" alt="Логотип" width="51" height="37">
+        </div>
+    </a>
+
+                <div class="burger-container">
+                    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                    <label class="burger" for="burger-checkbox"></label>
+
+                    <nav class="mobile-nav">
+                    <ul style="margin-top: 50px;">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                Услуги <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none; font-size: 16px;">Аппартная косметология</a></li>
+                <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none; font-size: 16px;">Уходовые процедуры</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                О нас <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about' %}" style="outline: none; font-size: 16px;">О клинике</a></li>
+                <li><a class="dropdown-item" href="{% url 'licenses' %}" style="outline: none; font-size: 16px;">Юридическая информация</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}" style="outline: none; font-size: 16px;">Контакты</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="#" style="font-size: 16px;">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}" style="font-size: 16px;">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'vacancies' %}" style="font-size: 16px;">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news' %}" style="font-size: 16px;">Блог</a></li>
+        </ul>
+                </nav>
+                </div>
+
+
+
+</div>
+    </div>
+
+
+
+
+    </header>
+
 <section class="container container-stock-crumbs">
     <span><a href="/" style="font-size: 16px; color: #6E6E6E;">Главная</a> / <a href="{{ request.path }}" style="font-size: 16px; color: black;">Акции</a></span>
 </section>
 
 <section class="container container-stock-clients-day">
-    <p style="font-size: 35px; font-family: 'Prata', serif;">КЛИЕНТСКИЕ ДНИ</p>
-    <p style="font-size: 18px;">В рамках наших Клиентских Дней мы предлагаем вам уникальную возможность воспользоваться<br>специальными скидками и акциями на широкий спектр мед и косметических услуг.</p>
-    <div class="d-flex row" style="margin-top: 50px;">
+    <p style="font-size: 35px; font-family: 'Prata', serif;" class="zag-about-mob">КЛИЕНТСКИЕ ДНИ</p>
+    <p style="font-size: 18px;" class="desc-work-text-img-mob stock-desc-work-text-mob">В рамках наших Клиентских Дней мы предлагаем вам уникальную возможность воспользоваться<br>специальными скидками и акциями на широкий спектр мед и косметических услуг.</p>
+    <div class="d-flex row" style="margin-top: 50px; row-gap: 20px;">
         <div class="col-md-6">
             <div class="card card-offer-1">
-                <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 22px; font-family: 'Prata', serif;">ДЕНЬ ПИЛИНГА</span>
-                    <span style="font-size: 22px; font-family: 'Prata', serif;">23-24 АПРЕЛЯ</span>
+                <div class="d-flex align-items-center justify-content-between mob-div-card-offer">
+                    <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-card-offer-mob">ДЕНЬ ПИЛИНГА</span>
+                    <span style="font-size: 22px; font-family: 'Prata', serif;" class="date-card-offer-mob">23-24 АПРЕЛЯ</span>
                 </div>
-                <p style="margin-top: 35px; font-size: 18px; font-weight: 600;">Все пилинги стоят 2500 рублей</p>
+                <p style="margin-top: 35px; font-size: 18px; font-weight: 600;" class="card-offer-desc-mob">Все пилинги стоят 2500 рублей</p>
                 <div class="d-flex align-items-end justify-content-between">
-                    <span style="font-size: 16px; width: 494px;">Во всех филиалах нашей клиники мы предлагаем выгодное предложение на все пилинги, что позволяет нашим клиентам получить высококачественные процедуры по доступной цене.</span>
+                    <span style="font-size: 16px; width: 494px;" class="card-offer-desc-mob">Во всех филиалах нашей клиники мы предлагаем выгодное предложение на все пилинги, что позволяет нашим клиентам получить высококачественные процедуры по доступной цене.</span>
                     <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;">
                 </div>
             </div>
@@ -104,13 +165,13 @@
 
         <div class="col-md-6">
             <div class="card card-offer-1">
-                <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 22px; font-family: 'Prata', serif;">ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ</span>
-                    <span style="font-size: 22px; font-family: 'Prata', serif;">27-28 АПРЕЛЯ</span>
+                <div class="d-flex align-items-center justify-content-between mob-div-card-offer">
+                    <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-card-offer-mob">ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ</span>
+                    <span style="font-size: 22px; font-family: 'Prata', serif;" class="date-card-offer-mob">27-28 АПРЕЛЯ</span>
                 </div>
-                <p style="margin-top: 35px; font-size: 18px; font-weight: 600;">2 абонемента по цене 1</p>
+                <p style="margin-top: 35px; font-size: 18px; font-weight: 600;" class="card-offer-desc-mob">2 абонемента по цене 1</p>
                 <div class="d-flex align-items-end justify-content-between">
-                    <span style="font-size: 16px; width: 494px;">Наши клиенты могут получить двойную пользу от наших услуг по одной и той же цене. Эта акция является отличной возможностью для вас и вашего здоровья</span>
+                    <span style="font-size: 16px; width: 494px;" class="card-offer-desc-mob">Наши клиенты могут получить двойную пользу от наших услуг по одной и той же цене. Эта акция является отличной возможностью для вас и вашего здоровья</span>
                     <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;">
                 </div>
             </div>
@@ -118,15 +179,15 @@
     </div>
 </section>
 
-<section class="container container-stock-abonement">
-    <p style="font-size: 35px; font-family: 'Prata', serif;">АБОНЕМЕНТЫ</p>
+<section class="container container-stock-abonement stock-abonement-desk-slider">
+    <p style="font-size: 35px; font-family: 'Prata', serif;" class="zag-abonement-mob">АБОНЕМЕНТЫ</p>
     <div class="d-flex row" style="margin-top: 50px; row-gap: 30px;">
         <div class="col-md-6">
-            <div class="card card-abonement">
+            <div class="card card-abonement card-abonement-shadow">
 
                 <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
-                <div class="d-flex" style="margin-top: 30px; gap: 20px;">
-                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;">
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
                     <div>
                         <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
 
@@ -147,11 +208,11 @@
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-abonement">
+            <div class="card card-abonement card-abonement-shadow">
 
                 <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
-                <div class="d-flex" style="margin-top: 30px; gap: 20px;">
-                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;">
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
                     <div>
                         <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
 
@@ -172,11 +233,11 @@
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-abonement">
+            <div class="card card-abonement card-abonement-shadow">
 
                 <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
-                <div class="d-flex" style="margin-top: 30px; gap: 20px;">
-                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;">
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
                     <div>
                         <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
 
@@ -197,11 +258,11 @@
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-abonement">
+            <div class="card card-abonement card-abonement-shadow">
 
                 <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
-                <div class="d-flex" style="margin-top: 30px; gap: 20px;">
-                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;">
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
                     <div>
                         <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
 
@@ -223,95 +284,161 @@
         </div>
     </div>
 </section>
+
+<section class="container container-stock-abonement stock-abonement-mob-slider">
+    <p style="font-size: 35px; font-family: 'Prata', serif;" class="text-center zag-abonement-mob">АБОНЕМЕНТЫ</p>
+    <div class="abonement-slider" style="margin-top: 30px;">
+        <div class="col-12 me-2">
+            <div class="card card-abonement">
+
+                <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
+                    <div>
+                        <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
+                        <p style="margin-top: 24px;"><del style="font-size: 18px; font-family: 'Prata', serif; margin-right: 20px; color: #6E6E6E;">20 000 ₽</del><span style="font-size: 22px; font-family: 'Prata', serif;">15 000 ₽</span></p>
+                        <hr style="margin-top: 20px;">
+                        <ul style="margin-top: 20px;">
+                            <li style="font-size: 16px; color: #6E6E6E;">Возможность выбора времени и дня процедуры</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Бесплатная консультация с массажистом перед каждой процедурой</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Экономия до 30% по сравнению с отдельными процедурами</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Срок действия абонемента 6 месяцев</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <div class="col-12 me-2">
+            <div class="card card-abonement">
+
+                <span style="font-size: 22px; font-family: 'Prata', serif;">МАССАЖ MAXI</span>
+                <div class="d-flex card-abonement-mob" style="margin-top: 30px; gap: 20px;">
+                    <img src="{% static 'img/IMG-20250412-WA0180 (2) 1.png' %}" style="object-fit: cover; border-radius: 25px;" class="img-abonement-mob">
+                    <div>
+                        <p style="font-size: 18px; font-weight: 600;">Абонемент на 10 процедур массажа</p>
+                        <p style="margin-top: 24px;"><del style="font-size: 18px; font-family: 'Prata', serif; margin-right: 20px; color: #6E6E6E;">20 000 ₽</del><span style="font-size: 22px; font-family: 'Prata', serif;">15 000 ₽</span></p>
+                        <hr style="margin-top: 20px;">
+                        <ul style="margin-top: 20px;">
+                            <li style="font-size: 16px; color: #6E6E6E;">Возможность выбора времени и дня процедуры</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Бесплатная консультация с массажистом перед каждой процедурой</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Экономия до 30% по сравнению с отдельными процедурами</li>
+                            <li style="font-size: 16px; color: #6E6E6E;">Срок действия абонемента 6 месяцев</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-between" style="margin-top: 30px;">
+            <a href="#" class="btn-all-abonement">Все абонементы</a>
+            <div class="d-flex align-items-center strel-abonement-mob">
+                <span class="page-indicator-abonement active me-3" data-index="0" style="font-size: 22px; font-family: 'Prata', serif;">01</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="page-indicator-abonement me-3" data-index="1">02</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="page-indicator-abonement me-3" data-index="2">03</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif; margin-right: 50px;" class="page-indicator-abonement" data-index="3">04</span>
+                <button class="slick-prev-custom prev-abonement me-3" aria-label="Previous" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+<path d="M17 6.74074C17.4091 6.74074 17.7407 6.4091 17.7407 6C17.7407 5.5909 17.4091 5.25926 17 5.25926L17 6.74074ZM0.213627 5.47622C-0.0756511 5.76549 -0.0756512 6.2345 0.213627 6.52378L4.92767 11.2378C5.21695 11.5271 5.68596 11.5271 5.97524 11.2378C6.26451 10.9485 6.26451 10.4795 5.97524 10.1903L1.78498 6L5.97524 1.80974C6.26451 1.52046 6.26451 1.05145 5.97524 0.762171C5.68596 0.472894 5.21695 0.472894 4.92767 0.762171L0.213627 5.47622ZM17 6L17 5.25926L0.73741 5.25926L0.73741 6L0.73741 6.74074L17 6.74074L17 6Z" fill="white"/>
+</svg>
+        </button>
+        <button class="slick-next-custom next-abonement" aria-label="Next" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+<path d="M1 5.25926C0.5909 5.25926 0.259259 5.5909 0.259259 6C0.259259 6.4091 0.5909 6.74074 1 6.74074V5.25926ZM17.7864 6.52378C18.0757 6.23451 18.0757 5.76549 17.7864 5.47622L13.0723 0.762172C12.7831 0.472895 12.314 0.472895 12.0248 0.762172C11.7355 1.05145 11.7355 1.52046 12.0248 1.80974L16.215 6L12.0248 10.1903C11.7355 10.4795 11.7355 10.9486 12.0248 11.2378C12.314 11.5271 12.7831 11.5271 13.0723 11.2378L17.7864 6.52378ZM1 6V6.74074L17.2626 6.74074V6V5.25926L1 5.25926V6Z" fill="white"/>
+</svg>
+        </button>
+            </div>
+        </div>
+</section>
+
 
 <section class="container container-stock-offer">
-    <p style="font-size: 35px; font-family: 'Prata', serif;">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</p>
+    <p style="font-size: 35px; font-family: 'Prata', serif;" class="zag-offer-mob">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</p>
     <div class="d-flex row" style="margin-top: 50px; row-gap: 30px;">
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="card card-offer-2">
+            <div class="card card-offer-2 card-offer-2-shadow">
 
-                <span style="font-size: 22px; font-family: 'Prata', serif;">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                <span style="font-size: 22px; font-family: 'Prata', serif;" class="zag-sertif-mob">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
                 <div class="d-flex" style="margin-top: 30px; gap: 20px;">
                     <img src="{% static 'img/Frame offer.png' %}" style="object-fit: cover; border-radius: 25px;">
                     <div>
-                        <p style="font-size: 18px; font-weight: 600;">Идеальный подарок на праздники для любимых</p>
-                        <p style="font-size: 16px;">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
-                        <p style="font-size: 14px; color: #6E6E6E;">с 01.04.25 до 30.04.25</p>
+                        <p style="font-size: 18px; font-weight: 600;" class="sertif-desc-mob">Идеальный подарок на праздники для любимых</p>
+                        <p style="font-size: 16px;" class="sertif-desc-mob">Подарочные сертификаты могут быть получены через наш сайт или в наших офисах. Для получения сертификата офлайн, вам необходимо посетить один из наших офисов или заполнить форму на нашем сайте</p>
+                        <p style="font-size: 14px; color: #6E6E6E;" class="sertif-desc-mob">с 01.04.25 до 30.04.25</p>
                         <button class="btn-stock-online">Заказать онлайн</button>
                     </div>
                 </div>
@@ -325,7 +452,7 @@
     <div class="card card-feedback">
     <div class="d-flex row">
             <div class="col-md-6">
-                <p style="font-size: 40px; font-family: 'Prata', serif;">НАПИШИТЕ НАМ</p>
+                <p style="font-size: 40px; font-family: 'Prata', serif;" class="zag-feedback-mob">НАПИШИТЕ НАМ</p>
                 <p style="font-size: 16px; margin-top: 20px;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
                 <div class="d-flex align-items-center" style="margin-top: 30px;">
                     <img src="{% static 'img/_5068681 1.png' %}" width="17" height="17" style="margin-right: 12px;">
@@ -339,7 +466,7 @@
             <div class="col-md-6">
     <form>
         <!-- Первая строка - имя и телефон -->
-        <div class="row mb-3">
+        <div class="row mb-3 feedback-name-field-block-mob" style="row-gap: 15px;">
             <div class="col-md-6">
                 <input type="text" class="form-control custom-input" placeholder="Имя" required>
             </div>
@@ -378,7 +505,7 @@
     <div class="container">
 
 
-            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+            <div class="d-flex justify-content-between align-items-center nav-footer-desk" style="width: 100%;">
     <!-- Логотип слева -->
     <a href="/" style="z-index: 1000;">
         <div class="d-flex align-items-center">
@@ -400,8 +527,34 @@
     </nav>
 
 </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-mob-footer" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'img/Frame 76.png' %}" alt="Логотип" width="51" height="37" style="margin-right: 23px;" class="img-2-footer-mob">
+            <img src="{% static 'img/Frame 74.png' %}" class="img-footer-mob">
+        </div>
+    </a>
+
+</div>
+
         <hr style="color: white; margin-top: 30px;">
-        <div class="d-flex justify-content-between align-items-center" style="width: 100%; margin-top: 30px;">
+
+        <div class="d-flex justify-content-between nav-2-mob-footer">
+            <nav class="d-flex row justify-content-between" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav d-flex justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'licenses' %}">О клинике</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-2-footer-desk" style="width: 100%; margin-top: 30px;">
             <a href="#" style="color: white; text-decoration: revert;">Политика обработки персональных данных</a>
             <div class="d-flex align-items-center">
                 <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
@@ -409,8 +562,79 @@
                 <img src="{% static 'img/tg.png' %}" width="18" height="18">
             </div>
         </div>
+
+        <div class="nav-3-footer-mob" style="width: 100%; margin-top: 30px;">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+                <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+            <a href="#" style="color: white; text-decoration: revert; font-size: 14px;">Политика обработки персональных данных</a>
+                </div>
+        </div>
+
     </div>
 </footer>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    var slider_abonement = $('.abonement-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+
+    slider_abonement.on('afterChange', function(event, slick, currentSlide) {
+    updatePageIndicatorsAbonement(currentSlide);
+    });
+
+    function updatePageIndicatorsAbonement(currentSlide) {
+    $('.page-indicator-abonement').removeClass('active');
+
+    for (let i = 0; i < 2; i++) {
+        let index = currentSlide + i;
+        if (index >= 0 && index < $('.page-indicator-abonement').length) {
+            $('.page-indicator-abonement[data-index="' + index + '"]').addClass('active');
+        }
+    }
+    }
+
+    $('.prev-abonement').click(function(){
+        slider_abonement.slick('slickPrev');
+    });
+
+    $('.next-abonement').click(function(){
+        slider_abonement.slick('slickNext');
+    });
+
+    $(document).ready(function() {
+        updatePageIndicatorsAbonement(0);
+    });
+
+});
+</script>
+
 </html>
