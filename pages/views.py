@@ -44,3 +44,18 @@ def hardware_cosmetology(request):
 def care_procedures(request):
     return render(request, 'care_procedures.html')
 
+
+def massage(request):
+    return render(request, 'massage.html')
+
+
+def peeling(request):
+    return render(request, 'peeling.html')
+
+
+def procedures_for_men(request):
+    return render(request, 'procedures_for_men.html')
+
+
+def spa(request):
+    return render(request, 'spa.html')

@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Юридическая информация</title>
+    <link rel="icon" type="image/png" href="{% static 'favicon/favicon-96x96.png' %}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon/favicon.svg' %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"  />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}"  />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
@@ -39,6 +44,10 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none;">Аппартная косметология</a></li>
                 <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none;">Уходовые процедуры</a></li>
+                <li><a class="dropdown-item" href="{% url 'massage' %}" style="outline: none;">Массаж</a></li>
+                <li><a class="dropdown-item" href="{% url 'peeling' %}" style="outline: none;">Пилинг</a></li>
+                <li><a class="dropdown-item" href="{% url 'procedures_for_men' %}" style="outline: none;">Процедуры для мужчин</a></li>
+                <li><a class="dropdown-item" href="{% url 'spa' %}" style="outline: none;">Спа программы</a></li>
 
             </ul>
         </li>
@@ -108,6 +117,10 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none; font-size: 16px;">Аппартная косметология</a></li>
                 <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none; font-size: 16px;">Уходовые процедуры</a></li>
+                <li><a class="dropdown-item" href="{% url 'massage' %}" style="outline: none;">Массаж</a></li>
+                <li><a class="dropdown-item" href="{% url 'peeling' %}" style="outline: none;">Пилинг</a></li>
+                <li><a class="dropdown-item" href="{% url 'procedures_for_men' %}" style="outline: none;">Процедуры для мужчин</a></li>
+                <li><a class="dropdown-item" href="{% url 'spa' %}" style="outline: none;">Спа программы</a></li>
 
             </ul>
         </li>

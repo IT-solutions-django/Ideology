@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аппаратная косметология</title>
+    <link rel="icon" type="image/png" href="{% static 'favicon/favicon-96x96.png' %}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon/favicon.svg' %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"  />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}"  />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
@@ -51,6 +56,10 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none;">Аппартная косметология</a></li>
                 <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none;">Уходовые процедуры</a></li>
+                <li><a class="dropdown-item" href="{% url 'massage' %}" style="outline: none;">Массаж</a></li>
+                <li><a class="dropdown-item" href="{% url 'peeling' %}" style="outline: none;">Пилинг</a></li>
+                <li><a class="dropdown-item" href="{% url 'procedures_for_men' %}" style="outline: none;">Процедуры для мужчин</a></li>
+                <li><a class="dropdown-item" href="{% url 'spa' %}" style="outline: none;">Спа программы</a></li>
 
             </ul>
         </li>
@@ -130,6 +139,10 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none; font-size: 16px;">Аппартная косметология</a></li>
                 <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none; font-size: 16px;">Уходовые процедуры</a></li>
+                <li><a class="dropdown-item" href="{% url 'massage' %}" style="outline: none;">Массаж</a></li>
+                <li><a class="dropdown-item" href="{% url 'peeling' %}" style="outline: none;">Пилинг</a></li>
+                <li><a class="dropdown-item" href="{% url 'procedures_for_men' %}" style="outline: none;">Процедуры для мужчин</a></li>
+                <li><a class="dropdown-item" href="{% url 'spa' %}" style="outline: none;">Спа программы</a></li>
 
             </ul>
         </li>
@@ -362,37 +375,31 @@
     <div class="d-flex row" style="row-gap: 20px; margin-top: 50px;">
         <div class="col-md-4">
             <div class="card card-service">
-                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
-                    <p style="font-size: 16px; margin-top: 20px; color: #2F2F2F;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-card-services-mob">СПА ПРОГРАММЫ ДЛЯ ТЕЛА</span>
+                    <p style="font-size: 16px; margin-top: 20px; color: #393939;" class="card-services-desc-mob">Эффективные процедуры для омоложения и улучшения состояния кожи тела, которые помогают уменьшить целлюлит, улучшить текстуру и эластичность кожи, и повысить ее общее здоровье и красоту.</p>
                     <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
-                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
-                        <a href="#">
-                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover">
-                        </a>
+                        <img src="{% static 'img/Group.png' %}" width="59" height="59" class="card-services-znak-1-mob">
+                        <a href="{% url 'spa' %}"><img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover"></a>
                     </div>
                 </div>
         </div>
         <div class="col-md-4">
             <div class="card card-service">
-                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
-                    <p style="font-size: 16px; margin-top: 20px; color: #2F2F2F;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-card-services-mob">ПИЛИНГ</span>
+                    <p style="font-size: 16px; margin-top: 20px; color: #393939;" class="card-services-desc-mob">Глубокие пилинги, которые помогают омолодить и улучшить состояние кожи тела, уменьшить целлюлит, улучшить текстуру и эластичность кожи, и повысить ее общее здоровье и красоту</p>
                     <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
-                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
-                        <a href="#">
-                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover">
-                        </a>
+                        <img src="{% static 'img/Group2.png' %}" width="59" height="59" class="card-services-znak-1-mob">
+                        <a href="{% url 'peeling' %}"><img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover"></a>
                     </div>
                 </div>
         </div>
         <div class="col-md-4">
             <div class="card card-service">
-                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;">АППАРАТНАЯ<br>КОСМЕТОЛОГИЯ</span>
-                    <p style="font-size: 16px; margin-top: 20px; color: #2F2F2F;">Современные процедуры, которые используют передовые технологии и оборудование для омоложения и улучшения состояния кожи</p>
+                    <span style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-card-services-mob">ПРОЦЕДУРЫ ДЛЯ<br>МУЖЧИН</span>
+                    <p style="font-size: 16px; margin-top: 20px; color: #393939;" class="card-services-desc-mob">Разработанные для удовлетворения их потребностей в области красоты и здоровья, направленные на улучшение внешнего вида и самочувствия</p>
                     <div class="d-flex justify-content-between align-items-end" style="margin-top: 48px;">
-                        <img src="{% static 'img/hair-removal_9411416 1.png' %}" width="59" height="59">
-                        <a href="#">
-                        <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover">
-                        </a>
+                        <img src="{% static 'img/Group3.png' %}" width="59" height="59" class="card-services-znak-1-mob">
+                        <a href="{% url 'procedures_for_men' %}"><img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover"></a>
                     </div>
                 </div>
         </div>
