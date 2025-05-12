@@ -101,7 +101,7 @@ a {
     color: #919191!important;
 }
 
-.btn-header-black:hover, .main-btn:hover, .btn-all-stock:hover, .slick-prev-custom:hover, .slick-next-custom:hover, .btn-all-abonement:hover, .btn-specialists:hover, .more-news-btn:hover {
+.btn-header-black:hover, .main-btn:hover, .btn-all-stock:hover, .slick-prev-custom:hover, .slick-next-custom:hover, .btn-all-abonement:hover, .btn-specialists:hover, .more-news-btn:hover, .btn-stock-online:hover, .btn-feedback:hover {
     background: linear-gradient(90deg, #554A40 0%, #554A40 100%);
     border-color: #554A40;
 }
@@ -666,7 +666,7 @@ footer .nav-link {
     margin-top: 20px;
     color: white;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .container-lic {
@@ -939,6 +939,36 @@ a:active, a:focus {
      box-shadow: 0px 7px 13.8px 0px #15282C14;
 }
 
+.dropdown-menu {
+    border: 1px solid white;
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 7px 13.8px 0px #15282C14;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: white!important;
+}
+
+.modal-header-feedback {
+    border-bottom: none!important;
+}
+
+.modal-content-feedback {
+    border-radius: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 7px 13.8px 0px #15282C14;
+}
+
+.modal-dialog-feedback {
+    width: 100%;
+    max-width: 562px;
+}
+
 @media (min-width: 1200px) {
     .container-decorative-header-img img {
         width: 790px;
@@ -952,6 +982,9 @@ a:active, a:focus {
 @media (min-width: 1600px) {
     .header-decoration {
         width: 870px;
+    }
+    .container-about-about {
+        margin-top: 150px;
     }
     .img-in-header-decor {
         right: 180px;
@@ -972,6 +1005,9 @@ a:active, a:focus {
 }
 
 @media (min-width: 1800px) {
+    .container-about-about {
+        margin-top: 180px;
+    }
     .header-decoration {
         width: 1100px;
         right: -250px;
@@ -1008,6 +1044,15 @@ a:active, a:focus {
 }
 
 @media (min-width: 2000px) {
+    .container-decorative-about-header-img img {
+        width: 1580px;
+    }
+    .container-about-about {
+        margin-top: 580px;
+    }
+    .decorative-2-about-header {
+        width: 90px;
+    }
     .header-decoration {
         width: 1650px;
         right: -250px;

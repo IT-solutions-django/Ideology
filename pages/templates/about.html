@@ -27,7 +27,7 @@
     <img src="{% static 'img/Vector.png' %}" class="decorative-2-about-header">
 </section>
 
-<header class="container-fluid">
+<header class="container-fluid header-desk">
     <div class="container d-flex justify-content-between align-items-center">
 
 
@@ -75,13 +75,23 @@
     </nav>
 
     <!-- Телефон и иконка справа -->
-    <div class="d-flex align-items-center right-header" style="z-index: 1000;">
+    <div class="align-items-center right-header right-header-js" style="z-index: 1000;">
         <div class="d-flex align-items-center">
-            <a href="#" class="phone">+7 (914) 731-25-55</a>
+            <a href="tel:+79147312555" target="_blank" class="phone">+7 (914) 731-25-55</a>
             <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
-            <img src="{% static 'img/tg.png' %}" width="18" height="18">
+            <a href="https://t.me/ideologia_vl" class="d-flex align-items-center" target="_blank"><img src="{% static 'img/tg.png' %}" width="18" height="18"></a>
             <div class="devisor"></div>
-            <a href="#" class="btn-header">Записаться</a>
+            <a href="https://n1253794.yclients.com/company/1146478/personal/menu?o=" target="_blank" class="btn-header">Записаться</a>
+        </div>
+    </div>
+
+                <div class="align-items-center right-header right-header-scroll-js right-header-scroll-css" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <a href="tel:+79147312555" target="_blank" class="phone-black">+7 (914) 731-25-55</a>
+            <img src="{% static 'img/Vector-black.png' %}" width="21" height="14" class="vk">
+            <a href="https://t.me/ideologia_vl" class="d-flex align-items-center" target="_blank"><img src="{% static 'img/Vector-tg-black.png' %}" width="18" height="18"></a>
+            <div class="devisor-black"></div>
+            <a href="https://n1253794.yclients.com/company/1146478/personal/menu?o=" target="_blank" class="btn-header-black">Записаться</a>
         </div>
     </div>
 </div>
@@ -93,43 +103,105 @@
     </header>
 
 
+<header class="container-fluid header-mob">
+    <div class="container d-flex justify-content-between align-items-center">
+
+
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div>
+            <img src="{% static 'img/Logo.png' %}" alt="Логотип" width="51" height="37">
+        </div>
+    </a>
+
+                <div class="burger-container">
+                    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                    <label class="burger" for="burger-checkbox"></label>
+
+                    <nav class="mobile-nav">
+                    <ul style="margin-top: 50px;">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                Услуги <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'hardware_cosmetology' %}" style="outline: none; font-size: 16px;">Аппартная косметология</a></li>
+                <li><a class="dropdown-item" href="{% url 'care_procedures' %}" style="outline: none; font-size: 16px;">Уходовые процедуры</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; font-size: 16px;">
+                О нас <svg width="11" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px; color: #919191;">
+        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'about' %}" style="outline: none; font-size: 16px;">О клинике</a></li>
+                <li><a class="dropdown-item" href="{% url 'licenses' %}" style="outline: none; font-size: 16px;">Юридическая информация</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}" style="outline: none; font-size: 16px;">Контакты</a></li>
+
+            </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="#" style="font-size: 16px;">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}" style="font-size: 16px;">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'vacancies' %}" style="font-size: 16px;">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news' %}" style="font-size: 16px;">Блог</a></li>
+        </ul>
+                </nav>
+                </div>
+
+
+
+</div>
+    </div>
+
+
+
+
+    </header>
+
+
 <section class="container main-container">
-    <h1 style="font-family: 'Prata', serif;">О КЛИНИКЕ</h1>
-    <p class="main-p">Идеология - это современное медицинское учреждение, которое сочетает в себе медицину и эстетику. В клинике работают опытные врачи и специалисты, а сама клиника оснащена современным оборудованием</p>
+    <h1 style="font-family: 'Prata', serif; color: #393939;">О КЛИНИКЕ</h1>
+    <p class="main-p" style="color: #393939;">Идеология - это современное медицинское учреждение, которое сочетает в себе медицину и эстетику. В клинике работают опытные врачи и специалисты, а сама клиника оснащена современным оборудованием</p>
     <div class="d-flex div-main-btn align-items-center">
-        <button class="main-btn">Записаться онлайн</button>
-        <img src="{% static 'img/socials.png' %}" width="54" height="54">
+        <a href="https://n1253794.yclients.com/company/1146478/personal/menu?o="  target="_blank" class="main-btn">Записаться онлайн</a>
+        <a href="https://wa.me/79147312555" target="_blank"><img src="{% static 'img/socials.png' %}" width="54" height="54" class="main-wa-mob wa-hover"></a>
     </div>
 </section>
 
-<section class="container container-about">
+<section class="container container-about container-about-about">
     <div class="d-flex row">
         <div class="col-md-4">
             <img src="{% static 'img/Frame 2087325659.png' %}" class="img-fluid">
         </div>
         <div class="col-md-6">
-            <span style="font-size: 48px; font-family: 'Prata', serif;">О НАС</span>
-            <p style="font-size: 22px; margin-top: 20px; font-family: 'Prata', serif;">ИДЕОЛОГИЯ - ЭТО НЕ ПРОСТО НАЗВАНИЕ, ЭТО ВАШ ЛИЧНЫЙ СТИЛЬ И ФИЛОСОФИЯ ЖИЗНИ</p>
-            <p style="font-size: 16px;">Наша основная цель - предоставить каждому пациенту индивидуальный подход, учитывая его уникальные потребности и проблемы, и предлагать наиболее эффективные и безопасные методы лечения, соответствующие стандартам. </p>
+            <span style="font-size: 48px; font-family: 'Prata', serif; color: #2F2F2F;">О НАС</span>
+            <p style="font-size: 22px; margin-top: 20px; font-family: 'Prata', serif; color: #2F2F2F;">ИДЕОЛОГИЯ - ЭТО НЕ ПРОСТО НАЗВАНИЕ, ЭТО ВАШ ЛИЧНЫЙ СТИЛЬ И ФИЛОСОФИЯ ЖИЗНИ</p>
+            <p style="font-size: 16px; color: #2F2F2F;">Наша основная цель - предоставить каждому пациенту индивидуальный подход, учитывая его уникальные потребности и проблемы, и предлагать наиболее эффективные и безопасные методы лечения, соответствующие стандартам. </p>
             <hr style="margin-top: 20px;">
             <div class="d-flex row" style="margin-top: 20px;">
                 <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif;">+5 лет</span>
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+5 лет</span>
                     <p style="font-size: 13px; color: #686868;">В сфере медицины</p>
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif;">25</span>
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">25</span>
                     <p style="font-size: 13px; color: #686868;">Специалистов в штабе</p>
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif;">+1000</span>
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+1000</span>
                     <p style="font-size: 13px; color: #686868;">Довольных пациентов</p>
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif;">+30</span>
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+30</span>
                     <p style="font-size: 13px; color: #686868;">Лицензированных аппаратов</p>
                 </div>
             </div>
@@ -138,8 +210,8 @@
             <img src="{% static 'img/Frame 2087325660.png' %}" class="img-fluid" style="height: 315px; border-radius: 25px; object-fit: cover;">
             <div class="d-flex justify-content-center">
                 <img src="{% static 'img/Frame 2087325623.png' %}" width="50" height="50">
-                <img src="{% static 'img/Frame 2087325621.png' %}" width="50" height="50">
-                <img src="{% static 'img/Frame 2087325624.png' %}" width="50" height="50">
+                <a href="https://t.me/ideologia_vl" target="_blank"><img src="{% static 'img/Frame 2087325621.png' %}" width="50" height="50"></a>
+                <a href="https://wa.me/79147312555" target="_blank"><img src="{% static 'img/Frame 2087325624.png' %}" width="50" height="50"></a>
             </div>
         </div>
     </div>
@@ -156,12 +228,12 @@
 
 
 <section class="container container-specialists">
-    <p style="font-size: 48px; font-family: 'Prata', serif;" class="text-center">НАШИ СПЕЦИАЛИСТЫ</p>
+    <p style="font-size: 48px; font-family: 'Prata', serif; color: #2F2F2F;" class="text-center zag-specialist-mob">НАШИ СПЕЦИАЛИСТЫ</p>
     <div class="d-flex justify-content-between align-items-center" style="margin-top: 54px;">
         <div class="col-md-8">
-            <span style="font-size: 16px;">Наша команда клиники состоит из специалистов с профильным образованием, которые обладают глубокими знаниями и навыками в своей области. Все они прошли специализированное обучение и имеют необходимую квалификацию</span>
+            <p style="font-size: 16px; color: #000000;" class="desc-specialist-mob">Наша команда клиники состоит из специалистов с профильным образованием, которые обладают глубокими знаниями и навыками в своей области. Все они прошли специализированное обучение и имеют необходимую квалификацию</p>
         </div>
-        <div class="col-md-4 text-end">
+        <div class="d-flex justify-content-end col-md-4 text-end strel-specialist-mob">
         <!-- Кнопки навигации для слайдера -->
         <button class="slick-prev-custom prev-specialists me-3" aria-label="Previous" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -181,12 +253,12 @@
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
-                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
+                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
                         <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
 </svg></button>
@@ -198,12 +270,12 @@
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
-                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
+                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
                         <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
 </svg></button>
@@ -215,12 +287,12 @@
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
-                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
+                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
                         <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
 </svg></button>
@@ -232,12 +304,12 @@
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
-                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
+                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
                         <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
 </svg></button>
@@ -249,12 +321,12 @@
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600;">Костюкович Ирина</p>
-                        <p style="font-size: 16px;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
+                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
                         <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
 </svg></button>
@@ -266,31 +338,31 @@
 
 
 <section class="container container-reviews">
-    <p style="font-size: 48px; font-family: 'Prata', serif;" class="text-center">ОТЗЫВЫ</p>
+    <p style="font-size: 48px; font-family: 'Prata', serif; color: #2F2F2F;" class="text-center zag-review-mob">ОТЗЫВЫ</p>
     <div class="d-flex align-items-center justify-content-center">
         <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-        <span style="font-size: 16px; margin-right: 23px; font-weight: 600;">4.0</span>
+        <span style="font-size: 16px; margin-right: 23px; font-weight: 600; color: #323231;">4.0</span>
 
-        <img src="{% static 'img/2gis.png' %}" width="28" height="28" style="margin-right: 10px;">
+        <a href="https://2gis.ru/vladivostok/firm/70000001087697746" target="_blank"><img src="{% static 'img/2gis.png' %}" width="28" height="28" style="margin-right: 10px;"></a>
         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-        <span style="font-size: 16px; font-weight: 600;" class="d-flex align-items-center">4.9</span>
+        <span style="font-size: 16px; font-weight: 600; color: #323231;" class="d-flex align-items-center">4.9</span>
     </div>
-    <div class="d-flex row" style="margin-top: 30px; row-gap: 16px;">
+    <div class="d-flex row" style="margin-top: 30px; row-gap: 16px;" id="reviews-container">
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
@@ -300,17 +372,17 @@
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
@@ -320,17 +392,17 @@
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
@@ -340,17 +412,17 @@
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
@@ -360,17 +432,17 @@
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
@@ -380,30 +452,30 @@
         <div class="col-md-4">
             <div class="card card-review">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span style="font-size: 16px; font-weight: 600;">Иванова Ольга</span>
+                    <span style="font-size: 16px; font-weight: 600; color: #323231;">Иванова Ольга</span>
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/Star 3.png' %}" width="21" height="21" style="margin-right: 5px;">
-                        <span style="font-size: 16px; font-weight: 600;">5.0</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #323231;">5.0</span>
                 </div>
             </div>
                 <div class="d-flex" style="margin-top: 16px;">
                     <img src="{% static 'img/image 269.png' %}" style="margin-right: 17px;">
                     <img src="{% static 'img/image 269.png' %}">
                 </div>
-                <p style="font-size: 14px; margin-top: 16px;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
+                <p style="font-size: 14px; margin-top: 16px; color: #323231;">Потрясающий сервис, приветливый администратор, предлагает водичку с лимоном, чай, кофе... </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <span style="font-size: 14px;" class="date-review">7 октября 2023 г.</span>
                     <img src="{% static 'img/yandex.png' %}" width="28" height="28" style="margin-right: 8px;">
                 </div>
         </div>
     </div>
-        <a href="#" style="font-size: 20px; color: #968577; margin-top: 50px; font-weight: 600;" class="text-center">Показать еще (123)</a>
+        <a href="#" style="font-size: 20px; color: #968577; margin-top: 50px; font-weight: 600;" class="text-center watch-more-review-hover" id="show-more-btn" >Показать еще (123)</a>
     </div>
 </section>
 
 
 <section class="container container-questions">
-    <p style="font-size: 48px; font-family: 'Prata', serif;" class="text-center">ОТВЕТЫ НА ВОПРОСЫ</p>
+    <p style="font-size: 48px; font-family: 'Prata', serif;" class="text-center zag-questions-mob">ОТВЕТЫ НА ВОПРОСЫ</p>
     <div class="d-flex row">
         <div class="col-md-6">
     <div class="accordion" id="myAccordion">
@@ -462,15 +534,15 @@
         </div>
     </div>
 </div>
-        <div class="col-md-6">
-            <p style="font-size: 30px; font-family: 'Prata', serif;">КЛИНИКА НА КАРТЕ</p>
+        <div class="col-md-6 div-clinica-mob">
+            <p style="font-size: 30px; font-family: 'Prata', serif;" class="zag-clinica-mob">КЛИНИКА НА КАРТЕ</p>
             <div class="d-flex align-items-center">
                 <img src="{% static 'img/Subtract.png' %}" width="11" height="14" style="margin-right: 5px;">
-                <span style="font-size: 16px;">г. Владивосток, ул. Улица Кирова, 25е</span>
+                <a href="https://maps.app.goo.gl/8CtvU4iL5aeNStCK9" target="_blank" style="font-size: 16px; color: #2D2D2D;">г. Владивосток, ул. Улица Кирова, 25е</a>
             </div>
             <div class="map-container" style="border-radius: 25px; overflow: hidden; margin-top: 10px">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.123456789!2d30.523456789!3d50.4506789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf123456789%3A0x123456789abcde!2z0J_Qu9C-0YnQsNC00Ywg0LLRg9C7!5e0!3m2!1suk!2sua!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2909.5746007856146!2d131.9050286113466!3d43.17645288301514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3913d344a6365%3A0x698d8de49130ab80!2z0YPQu9C40YbQsCDQmtC40YDQvtCy0LAsIDI10LU!5e0!3m2!1sru!2sru!4v1746635099654!5m2!1sru!2sru"
                 width="650"
                 height="300"
                 style="border:0;"
@@ -487,21 +559,25 @@
     <div class="card card-feedback">
     <div class="d-flex row">
             <div class="col-md-6">
-                <p style="font-size: 40px; font-family: 'Prata', serif;">НАПИШИТЕ НАМ</p>
-                <p style="font-size: 16px; margin-top: 20px;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
+                <p style="font-size: 40px; font-family: 'Prata', serif;" class="zag-feedback-mob">НАПИШИТЕ НАМ</p>
+                <p style="font-size: 16px; margin-top: 20px; color: #2D2D2D;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!</p>
                 <div class="d-flex align-items-center" style="margin-top: 30px;">
+                    <img src="{% static 'img/telephone-fill.png' %}" width="14" height="14" style="margin-right: 12px;">
+                    <a href="tel:+79147312555" target="_blank" style="font-size: 16px; color: #2D2D2D;">+7 (914) 731-25-55</a>
+                </div>
+                <div class="d-flex align-items-center" style="margin-top: 20px;">
                     <img src="{% static 'img/_5068681 1.png' %}" width="17" height="17" style="margin-right: 12px;">
-                    <span style="font-size: 16px;">Idealogia@mail.ru</span>
+                    <a href="mailto:ideology.vl@gmail.com" target="_blank" style="font-size: 16px; color: #2D2D2D;">ideology.vl@gmail.com</a>
                 </div>
                 <div class="d-flex align-items-center" style="margin-top: 20px;">
                     <img src="{% static 'img/Union.png' %}" width="14" height="14" style="margin-right: 12px;">
-                    <span style="font-size: 16px;">10:00 – 21:00 вт-сб</span>
+                    <span style="font-size: 16px; color: #2D2D2D;">10:00 – 21:00 вт-сб</span>
                 </div>
             </div>
             <div class="col-md-6">
     <form>
         <!-- Первая строка - имя и телефон -->
-        <div class="row mb-3">
+        <div class="row mb-3 feedback-name-field-block-mob" style="row-gap: 15px;">
             <div class="col-md-6">
                 <input type="text" class="form-control custom-input" placeholder="Имя" required>
             </div>
@@ -540,7 +616,7 @@
     <div class="container">
 
 
-            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+            <div class="d-flex justify-content-between align-items-center nav-footer-desk" style="width: 100%;">
     <!-- Логотип слева -->
     <a href="/" style="z-index: 1000;">
         <div class="d-flex align-items-center">
@@ -552,25 +628,63 @@
     <!-- Навигация по центру -->
     <nav class="d-flex justify-content-end" style="z-index: 1000; flex-grow: 1;">
         <ul class="nav">
-            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Услуги</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'services' %}">Услуги</a></li>
             <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Команда</a></li>
             <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
-            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'licenses' %}">О клинике</a></li>
-            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="#">Вакансии</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'about' %}">О клинике</a></li>
+            <li class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="{% url 'vacancies' %}">Вакансии</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
         </ul>
     </nav>
 
 </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-mob-footer" style="width: 100%;">
+    <!-- Логотип слева -->
+    <a href="/" style="z-index: 1000;">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'img/Frame 76.png' %}" alt="Логотип" width="51" height="37" style="margin-right: 23px;" class="img-2-footer-mob">
+            <img src="{% static 'img/Frame 74.png' %}" class="img-footer-mob">
+        </div>
+    </a>
+
+</div>
+
         <hr style="color: white; margin-top: 30px;">
-        <div class="d-flex justify-content-between align-items-center" style="width: 100%; margin-top: 30px;">
+
+        <div class="d-flex justify-content-between nav-2-mob-footer">
+            <nav class="d-flex row justify-content-between" style="z-index: 1000; flex-grow: 1;">
+        <ul class="nav d-flex justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Услуги</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Команда</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'stock' %}">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О клинике</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'vacancies' %}">Вакансии</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center nav-2-footer-desk" style="width: 100%; margin-top: 30px;">
             <a href="#" style="color: white; text-decoration: revert;">Политика обработки персональных данных</a>
             <div class="d-flex align-items-center">
-                <a href="#" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <a href="tel:+79147312555" target="_blank" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
                 <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
-                <img src="{% static 'img/tg.png' %}" width="18" height="18">
+                <a href="https://t.me/ideologia_vl" target="_blank" class="d-flex align-items-center"><img src="{% static 'img/tg.png' %}" width="18" height="18"></a>
             </div>
         </div>
+
+        <div class="nav-3-footer-mob" style="width: 100%; margin-top: 30px;">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="tel:+79147312555" class="phone" style="font-size: 16px;">+7 (914) 731-25-55</a>
+                <img src="{% static 'img/vk.png' %}" width="21" height="14" class="vk">
+                <a href="https://t.me/ideologia_vl" target="_blank" class="d-flex align-items-center"><img src="{% static 'img/tg.png' %}" width="18" height="18"></a>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+            <a href="#" style="color: white; text-decoration: revert; font-size: 14px;">Политика обработки персональных данных</a>
+                </div>
+        </div>
+
     </div>
 </footer>
 
@@ -718,6 +832,46 @@ $(document).ready(function(){
         updatePageIndicatorsAbonement(0);
     });
 
+});
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const mainContainer = document.querySelector('.main-container');
+    const headerMob = document.querySelector('.header-mob');
+
+    if (mainContainer.getBoundingClientRect().top <= 100) {
+        headerMob.style.backgroundColor = '#ffffff'; // непрозрачный фон
+    } else {
+        headerMob.style.backgroundColor = 'rgba(255, 255, 255, 0.001)'; // прозрачный фон
+    }
+});
+</script>
+
+
+<script>
+    window.addEventListener('scroll', function() {
+    const mainContainer = document.querySelector('.main-container');
+    const headerMob = document.querySelector('.header-desk');
+    const headerRightOld = document.querySelector('.right-header-js');
+    const headerRightNew = document.querySelector('.right-header-scroll-js');
+
+
+    if (mainContainer.getBoundingClientRect().top <= 100) {
+        headerMob.style.backgroundColor = '#ffffff'; // непрозрачный фон
+        headerRightOld.classList.remove('right-header');
+        headerRightOld.classList.add('right-header-scroll');
+        headerRightNew.classList.remove('right-header-scroll');
+        headerRightNew.classList.remove('right-header-scroll-css');
+        headerRightNew.classList.add('right-header');
+    } else {
+        headerMob.style.backgroundColor = 'rgba(255, 255, 255, 0.001)'; // прозрачный фон
+        headerRightOld.classList.remove('right-header-scroll');
+        headerRightOld.classList.add('right-header');
+        headerRightNew.classList.remove('right-header');
+        headerRightNew.classList.add('right-header-scroll');
+
+    }
 });
 </script>
 

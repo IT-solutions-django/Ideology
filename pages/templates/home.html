@@ -220,7 +220,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between card-offer-desc-div-mob" style="margin-top: 35px;">
                     <span style="font-size: 16px; color: #2F2F2F;" class="card-offer-desc-mob">Во всех филиалах нашей клинки все пилинги по 2500</span>
-                    <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover">
+                    <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover" id="specialOffer">
                 </div>
             </div>
         </div>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between card-offer-desc-div-mob" style="margin-top: 35px;">
                     <span style="font-size: 16px; color: #2F2F2F;" class="card-offer-desc-mob">Во всех филиалах нашей клинки все пилинги по 2500</span>
-                    <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover">
+                    <img src="{% static 'img/Frame 2087325690.png' %}" width="40" height="40" style="cursor: pointer;" class="srel-click-hover" id="specialOffer">
                 </div>
             </div>
         </div>
@@ -1156,8 +1156,61 @@
     </div>
 </footer>
 
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-feedback modal-dialog-centered">
+    <div class="modal-content modal-content-feedback">
+        <div class="modal-header modal-header-feedback">
+            <span style="font-size: 30px; font-family: 'Prata', serif; color: #2F2F2F;">НАПИШИТЕ НАМ</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body modal-body-feedback">
+          <p style="font-size: 16px; color: #2D2D2D;">Наши специалисты свяжутся с вами в ближайшее время, чтобы ответить на все ваши вопросы и помочь вам выбрать наиболее подходящую процедуру!<p>
+          <form>
+        <!-- Первая строка - имя и телефон -->
+        <div class="row mb-3 feedback-name-field-block-mob" style="row-gap: 15px;">
+            <div class="col-md-6">
+                <input type="text" class="form-control custom-input" placeholder="Имя" required>
+            </div>
+            <div class="col-md-6">
+                <input type="tel" class="form-control custom-input" placeholder="Телефон" required>
+            </div>
+        </div>
+
+        <!-- Поле сообщения -->
+        <div class="mb-3">
+            <textarea class="form-control custom-textarea" placeholder="Сообщение" rows="3"></textarea>
+        </div>
+
+        <!-- Чекбокс -->
+        <div class="form-check mb-3 d-flex align-items-center">
+            <input class="form-check-input custom-check" type="checkbox" id="agreeCheckModal" required checked>
+            <label class="form-check-label" for="agreeCheck" style="font-size: 16px;">
+                Согласие на обработку персональных данных
+            </label>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="submit" class="btn-feedback">Отправить</button>
+    </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    var buttons = document.querySelectorAll('#specialOffer');
+
+    buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var myModal = new bootstrap.Modal(document.getElementById('feedbackModal'), {});
+      myModal.show();
+    });
+    });
+</script>
 
 <script>
 $(document).ready(function(){
