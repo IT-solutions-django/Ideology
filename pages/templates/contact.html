@@ -167,9 +167,9 @@
             <div class="d-flex" style="margin-top: 40px; gap: 20px;">
                 <div>
                     <p style="font-size: 14px; color: #6E6E6E;">Контактые телефоны</p>
-                    <a href="tel:+79147312555" target="_blank" style="font-size: 20px; margin-top: 7px; color: black;">+7 (914) 731-25-55</a>
+                    <a href="tel:{{ contact.main_phone }}" target="_blank" style="font-size: 20px; margin-top: 7px; color: black;">{{ contact.main_phone }}</a>
                     <br>
-                    <a href="tel:+79502984475"  target="_blank" style="font-size: 20px; margin-top: 5px; color: black;">+7 (950) 298-44-75</a>
+                    <a href="tel:{{ contact.phone }}"  target="_blank" style="font-size: 20px; margin-top: 5px; color: black;">{{ contact.phone }}</a>
                     <div style="margin-top: 20px;">
                         <p style="font-size: 14px; color: #6E6E6E;">Социальные сети</p>
                         <div class="d-flex align-items-center" style="gap: 15px;">
@@ -183,10 +183,10 @@
                 <div>
                     <p style="font-size: 14px; color: #6E6E6E;">Почта</p>
 
-                    <a href="mailto:ideology.vl@gmail.com" target="_blank" style="font-size: 20px; margin-top: 7px; color: black;">ideology.vl@gmail.com</a>
+                    <a href="mailto:{{ contact.email }}" target="_blank" style="font-size: 20px; margin-top: 7px; color: black;">{{ contact.email }}</a>
                     <br>
-                    <p style="font-size: 14px; color: #6E6E6E; margin-top: 20px;">Часы работы</p>
-                    <span style="font-size: 20px;">10:00 – 21:00 вт-сб</span>
+                    <p style="font-size: 14px; color: #6E6E6E; margin-top: 20px; margin-bottom: 7px;">Часы работы</p>
+                    <span style="font-size: 20px;">{{ contact.schedule }}</span>
                 </div>
             </div>
         </div>
@@ -230,41 +230,15 @@
     </div>
     </div>
     <div class="lic-slider" style="margin-top: 30px;">
+        {% for lic in licenses_info %}
         <div class="col-12 me-2">
             <div class="card card-lic">
 
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
+                    <img src="{{ lic.photo.url }}" class="img-fluid" style="object-fit: cover; border-radius: 25px; width: 205px; height: 310px;">
+                        <p style="font-size: 16px; text-align: center; margin-top: 10px;" class="clamp-stock-offer-3">{{ lic.name }}</p>
                 </div>
         </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
+        {% endfor %}
 
     </div>
 </section>

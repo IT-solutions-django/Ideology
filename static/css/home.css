@@ -23,8 +23,8 @@ body {
 
 header {
     display: flex;
-    padding-top: 30px!important;
-    padding-bottom: 30px!important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
     background-color: white;
 }
 
@@ -102,12 +102,15 @@ a {
 }
 
 .btn-header-black:hover, .main-btn:hover, .btn-all-stock:hover, .slick-prev-custom:hover, .slick-next-custom:hover, .btn-all-abonement:hover, .btn-specialists:hover, .more-news-btn:hover, .btn-stock-online:hover, .btn-feedback:hover {
+    background: linear-gradient(90deg, #968577 0%, #554A40 100%);
+}
+
+.btn-header-black:active, .main-btn:active, .btn-all-stock:active, .slick-prev-custom:active, .slick-next-custom:active, .btn-all-abonement:active, .btn-specialists:active, .more-news-btn:active, .btn-stock-online:active, .btn-feedback:active {
     background: linear-gradient(90deg, #554A40 0%, #554A40 100%);
-    border-color: #554A40;
 }
 
 .srel-click-hover:hover {
-    filter: brightness(1.2) hue-rotate(0deg);
+    filter: brightness(1.1) hue-rotate(0deg);
 }
 
 .wa-hover:hover {
@@ -295,6 +298,13 @@ a {
     border-radius: 25px;
     border: 1px solid white;
     box-shadow: 0px 7px 13.8px 0px #15282C14;
+    height: 550px;
+    overflow: auto;
+}
+
+.card-body-specialists {
+    padding: 20px;
+    position: relative;
 }
 
 .stag-year {
@@ -344,6 +354,14 @@ a {
     color: #554A40!important;
 }
 
+.podrobnee-hover:hover + .podrobnee-icon path {
+    fill: #554A40;
+}
+
+.podrobnee-icon:hover path {
+    fill: #554A40;
+}
+
 .right-col-our-work {
     background: linear-gradient(270deg, #968577 0%, #D9C4B3 100%);
     border-top-left-radius: 171px;
@@ -380,11 +398,13 @@ a {
     border-radius: 25px;
     padding: 24px;
     box-shadow: 0px 7px 13.8px 0px #15282C14;
+    height: 240px;
+    overflow: auto;
 }
 
 .decoration-news {
     position: absolute;
-    top: 6950px;
+    top: 6900px;
     right: 0;
 }
 
@@ -519,7 +539,7 @@ footer .nav-link {
     padding-right: 28px;
     color: white;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 20px;
 }
 
@@ -580,6 +600,27 @@ footer .nav-link {
     padding-left: 20px;
     padding-right: 20px;
     box-shadow: 0px 7px 13.8px 0px #15282C14;
+    height: 350px;
+    overflow: auto;
+}
+
+.card-offer-2:hover, .card-abonement:hover {
+    box-shadow: 0px 7px 13.8px 0px #15282C38;
+}
+
+.card-offer-2:active, .card-abonement:active {
+    box-shadow: 0px 7px 13.8px 0px #15282C38;
+    background-color: #FBFBFB;
+    border: 1px solid #FBFBFB;
+}
+
+.btn-close:focus {
+    box-shadow: none!important;
+}
+
+.card-offer-2 img {
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 .btn-all-stock {
@@ -617,6 +658,8 @@ footer .nav-link {
     padding-left: 20px;
     padding-right: 20px;
     box-shadow: 0px 7px 13.8px 0px #15282C14;
+    height: 438px;
+    overflow: auto;
 }
 
 .page-indicator-abonement {
@@ -628,6 +671,10 @@ footer .nav-link {
 .slick-list {
     padding: 15px!important;
     margin: -15px!important;
+    padding-left:0!important;
+    margin-left:0!important;
+    padding-right:0!important;
+    margin-right:0!important;
 }
 
 .page-indicator-abonement.active {
@@ -686,6 +733,8 @@ footer .nav-link {
     border-radius: 25px;
     padding: 30px;
     box-shadow: 0px 7px 13.8px 0px #15282C14;
+    height: 420px;
+    overflow: auto;
 }
 
 .container-details {
@@ -837,6 +886,10 @@ a:active, a:focus {
   visibility: hidden;
 }
 
+.card-offer-2-stock-height {
+    height: 370px!important;
+}
+
 .burger {
   cursor: pointer;
   display: block;
@@ -966,6 +1019,7 @@ a:active, a:focus {
 
 .modal-header-feedback {
     border-bottom: none!important;
+    padding-bottom: 0;
 }
 
 .modal-content-feedback {
@@ -977,9 +1031,61 @@ a:active, a:focus {
     box-shadow: 0px 7px 13.8px 0px #15282C14;
 }
 
+.card-news-next-prev {
+    height: auto!important;
+}
+
+.desc-work-text-img-mob {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.clamp-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-stock-offer-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-stock-offer-3 {
+    display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-stock-offer-4 {
+    display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-stock-offer-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-abonement-stock-height {
+    height: 450px!important;
+}
+
 .modal-dialog-feedback {
     width: 100%;
     max-width: 562px;
+}
+
+.mob-review-main {
+    margin-top: 10px;
 }
 
 @media (min-width: 1200px) {
@@ -1010,7 +1116,7 @@ a:active, a:focus {
         top: 2250px;
     }
     .decoration-news {
-        top: 7100px;
+        top: 6850px;
     }
     .container-decorative-about-header-img img {
         width: 810px;
@@ -1042,7 +1148,7 @@ a:active, a:focus {
         top: 2100px;
     }
     .decoration-news {
-        top: 7000px;
+        top: 6850px;
         width: 730px;
     }
     .container-decorative-header-img {
@@ -1084,8 +1190,11 @@ a:active, a:focus {
         width: 130px;
     }
     .decoration-news {
-        top: 7400px;
+        top: 7050px;
         width: 1130px;
+    }
+    .card-service {
+        height: 385px;
     }
 }
 
@@ -1173,7 +1282,7 @@ a:active, a:focus {
         display: block;
     }
     .card-offer-desc-mob {
-        font-size: 14px!important;
+        font-size: 13px!important;
     }
     .card-offer-desc-div-mob {
         margin-top: 15px!important;
@@ -1288,6 +1397,7 @@ a:active, a:focus {
     }
     .desc-work-text-img-mob {
         font-size: 12px!important;
+        width: auto!important;
     }
     .zag-review-mob {
         font-size: 28px!important;
@@ -1417,6 +1527,40 @@ a:active, a:focus {
     .img-in-header-decor {
         right: 100px;
         height: 400px;
+    }
+    .card-abonement {
+        height: auto!important;
+    }
+    .clamp-stock-offer-2 {
+        -webkit-line-clamp: none!important;
+    }
+    .clamp-stock-offer-3 {
+        -webkit-line-clamp: none!important;
+    }
+    .clamp-stock-offer-1 {
+        -webkit-line-clamp: none!important;
+    }
+    .card-offer-2 {
+        height: auto!important;
+    }
+    .clamp-stock-offer-4 {
+        -webkit-line-clamp: none!important;
+    }
+    .btn-all-abonement {
+        display: none!important;
+    }
+    .card-specialists {
+        height: auto!important;
+    }
+    .news-img {
+        width: 100%!important;
+        height: 100%!important;
+    }
+    .card-service {
+        height: auto!important;
+    }
+    .card-news {
+        height: auto!important;
     }
 }
 

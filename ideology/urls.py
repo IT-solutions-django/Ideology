@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from pages.views import home, stock, licenses, contacts, about, vacancies, news, card_news, services, hardware_cosmetology, care_procedures, massage, peeling, procedures_for_men, spa
 
 urlpatterns = [
@@ -27,7 +29,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('vacancies/', vacancies, name='vacancies'),
     path('news/', news, name='news'),
-    path('card-news/', card_news, name='card-news'),
+    path('card-news/<int:news_id>/', card_news, name='card-news'),
     path('services/', services, name='services'),
     path('hardware_cosmetology/', hardware_cosmetology, name='hardware_cosmetology'),
     path('care_procedures/', care_procedures, name='care_procedures'),
@@ -36,3 +38,6 @@ urlpatterns = [
     path('procedures_for_men/', procedures_for_men, name='procedures_for_men'),
     path('spa/', spa, name='spa'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

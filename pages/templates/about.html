@@ -188,39 +188,40 @@
 </section>
 
 <section class="container container-about container-about-about">
-    <div class="d-flex row">
+    <div class="d-flex row" style="gap: 20px;">
         <div class="col-md-4">
-            <img src="{% static 'img/Frame 2087325659.png' %}" class="img-fluid">
+            <img src="{% static 'img/Frame 2087325659.png' %}" class="img-fluid img-start-old-about-mob">
         </div>
-        <div class="col-md-6">
-            <span style="font-size: 48px; font-family: 'Prata', serif; color: #2F2F2F;">О НАС</span>
-            <p style="font-size: 22px; margin-top: 20px; font-family: 'Prata', serif; color: #2F2F2F;">ИДЕОЛОГИЯ - ЭТО НЕ ПРОСТО НАЗВАНИЕ, ЭТО ВАШ ЛИЧНЫЙ СТИЛЬ И ФИЛОСОФИЯ ЖИЗНИ</p>
-            <p style="font-size: 16px; color: #2F2F2F;">Наша основная цель - предоставить каждому пациенту индивидуальный подход, учитывая его уникальные потребности и проблемы, и предлагать наиболее эффективные и безопасные методы лечения, соответствующие стандартам. </p>
+        <div class="col-md-6" style="flex: 1;">
+            <p style="font-size: 48px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-about-mob">О НАС</p>
+            <p style="font-size: 22px; margin-top: 20px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-2-about-mob">ИДЕОЛОГИЯ - ЭТО НЕ ПРОСТО НАЗВАНИЕ, ЭТО ВАШ ЛИЧНЫЙ СТИЛЬ И ФИЛОСОФИЯ ЖИЗНИ</p>
+            <p style="font-size: 16px; color: #2F2F2F;" class="about-desc-mob">Наша основная цель - предоставить каждому пациенту индивидуальный подход, учитывая его уникальные потребности и проблемы, и предлагать наиболее эффективные и безопасные методы лечения, соответствующие стандартам. </p>
             <hr style="margin-top: 20px;">
             <div class="d-flex row" style="margin-top: 20px;">
-                <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+5 лет</span>
+                <div class="col-md-3 col-6">
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">{{ about_info.numb_1 }}</span>
                     <p style="font-size: 13px; color: #686868;">В сфере медицины</p>
                 </div>
 
-                <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">25</span>
+                <div class="col-md-3 col-6">
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">{{ about_info.numb_2 }}</span>
                     <p style="font-size: 13px; color: #686868;">Специалистов в штабе</p>
                 </div>
 
-                <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+1000</span>
+                <div class="col-md-3 col-6">
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">{{ about_info.numb_3 }}</span>
                     <p style="font-size: 13px; color: #686868;">Довольных пациентов</p>
                 </div>
 
-                <div class="col-md-3">
-                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">+30</span>
+                <div class="col-md-3 col-6">
+                    <span style="font-size: 30px; font-family: 'Prata', serif; color: #393939;">{{ about_info.numb_4 }}</span>
                     <p style="font-size: 13px; color: #686868;">Лицензированных аппаратов</p>
                 </div>
             </div>
         </div>
         <div class="col-md-2">
-            <img src="{% static 'img/Frame 2087325660.png' %}" class="img-fluid" style="height: 315px; border-radius: 25px; object-fit: cover;">
+            <img src="{% static 'img/Frame 2087325659.png' %}" class="img-fluid img-end-new-about-mob" style="display: none;">
+            <img src="{% static 'img/Frame 2087325660.png' %}" class="img-fluid img-end-about-mob" style="height: 315px; border-radius: 25px; object-fit: cover;">
             <div class="d-flex justify-content-center">
                 <img src="{% static 'img/Frame 2087325623.png' %}" width="50" height="50">
                 <a href="https://t.me/ideologia_vl" target="_blank"><img src="{% static 'img/Frame 2087325621.png' %}" width="50" height="50"></a>
@@ -261,91 +262,26 @@
     </div>
     </div>
     <div class="specialists-slider" style="margin-top: 30px;">
+        {% for spec in specialist %}
         <div class="col-12 me-2">
             <div class="card card-specialists">
                     <div class="position-relative">
                         <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
                         <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
+                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж {{ spec.experience }} лет</small>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
-                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
-                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
+                    <div class="card-body card-body-specialists">
+                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;" class="clamp-stock-offer-1">{{ spec.name }}</p>
+                        <p style="font-size: 16px; color: #2F2F2F; padding-bottom: 20px;" class="clamp-stock-offer-2">{{ spec.desc }}</p>
+                        <a href="https://n1253794.yclients.com/company/1146478/personal/menu?o=" target="_blank" class="btn-specialists" style="bottom: 20px; position: absolute;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
-</svg></button>
+</svg></a>
                     </div>
                 </div>
         </div>
-        <div class="col-12 me-2">
-            <div class="card card-specialists">
-                    <div class="position-relative">
-                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
-                        <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
-                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
-                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
-</svg></button>
-                    </div>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-specialists">
-                    <div class="position-relative">
-                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
-                        <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
-                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
-                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
-</svg></button>
-                    </div>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-specialists">
-                    <div class="position-relative">
-                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
-                        <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
-                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
-                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
-</svg></button>
-                    </div>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-specialists">
-                    <div class="position-relative">
-                        <img src="{% static 'img/image 257.png' %}" class="card-img-top" alt="Авто">
-                        <div class="position-absolute bottom-0 px-3">
-                            <small class="stag-year" style="font-weight: 600; color: #2F2F2F;">Cтаж 10 лет</small>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p style="font-size: 20px; font-weight: 600; color: #2F2F2F;">Костюкович Ирина</p>
-                        <p style="font-size: 16px; color: #2F2F2F;">Главный врач клиники, врач-косметолог, врач-эстетист</p>
-                        <button class="btn-specialists" style="margin-top: 20px;">Записаться <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none" class="ms-2">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="white"/>
-</svg></button>
-                    </div>
-                </div>
-        </div>
+        {% endfor %}
+
     </div>
 </section>
 

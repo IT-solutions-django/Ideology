@@ -179,41 +179,15 @@
     </div>
     </div>
     <div class="lic-slider" style="margin-top: 30px;">
+        {% for lic in licenses_info %}
         <div class="col-12 me-2">
             <div class="card card-lic">
 
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
+                    <img src="{{ lic.photo.url }}" class="img-fluid" style="object-fit: cover; border-radius: 25px; width: 205px; height: 310px;">
+                        <p style="font-size: 16px; text-align: center; margin-top: 10px;" class="clamp-stock-offer-3">{{ lic.name }}</p>
                 </div>
         </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
-        <div class="col-12 me-2">
-            <div class="card card-lic">
-
-                    <img src="{% static 'img/image-lic.png' %}" class="img-fluid">
-                        <p style="font-size: 16px; text-align: center; margin-top: 10px;">Наименование</p>
-                </div>
-        </div>
+        {% endfor %}
 
     </div>
 </section>

@@ -162,101 +162,31 @@
 <section class="container container-news-news">
     <p style="font-size: 35px; font-family: 'Prata', serif; color: #2F2F2F;" class="zag-work-mob">НОВОСТИ</p>
     <div class="d-flex row" style="margin-top: 50px; row-gap: 30px;">
+        {% for news in news_info %}
         <div class="col-md-6">
             <div class="card card-news">
         <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
             <div>
-                <p style="font-size: 16px; font-weight: 600; color: #323231;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
-                <p style="font-size: 14px; color: #323231;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
+                <p style="font-size: 16px; font-weight: 600; color: #323231;" class="clamp-stock-offer-1">{{ news.name }}</p>
+                <p style="font-size: 14px; color: #323231;" class="clamp-stock-offer-4">{{ news.main_desc }}</p>
             </div>
-            <img src="{% static 'img/image 277.png' %}" style="object-fit: contain;">
+            <img src="{{ news.photo.url }}" style="object-fit: cover; width: 198px; height: 138px; border-radius: 25px;" class="news-img">
         </div>
         <div class="d-flex justify-content-between align-items-center" style="margin-top: 16px;">
             <div class="d-flex align-items-center">
-                <a href="{% url 'card-news' %}" class="d-flex align-items-center">
+                <a href="{% url 'card-news' news.id %}" class="d-flex align-items-center">
             <span style="font-size: 16px; color: #968577; font-weight: 600; margin-right: 10px;" class="podrobnee-hover">Подробнее</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+                <svg class="podrobnee-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
 <path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="#968577"/>
 </svg>
                 </a>
                 </div>
-            <span style="font-size: 14px; color: #323231B2;">7 октября 2023 г.</span>
+            <span style="font-size: 14px; color: #323231B2;">{{ news.date|date:"j E Y" }}</span>
         </div>
     </div>
         </div>
+        {% endfor %}
 
-        <div class="col-md-6">
-            <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
-            <div>
-                <p style="font-size: 16px; font-weight: 600; color: #323231;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
-                <p style="font-size: 14px; color: #323231;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
-            </div>
-            <img src="{% static 'img/image 277.png' %}" style="object-fit: contain;">
-        </div>
-        <div class="d-flex justify-content-between align-items-center" style="margin-top: 16px;">
-            <div class="d-flex align-items-center">
-                <a href="{% url 'card-news' %}" class="d-flex align-items-center">
-            <span style="font-size: 16px; color: #968577; font-weight: 600; margin-right: 10px;" class="podrobnee-hover">Подробнее</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="#968577"/>
-</svg>
-                </a>
-                </div>
-            <span style="font-size: 14px; color: #323231B2;">7 октября 2023 г.</span>
-        </div>
-    </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
-            <div>
-                <p style="font-size: 16px; font-weight: 600; color: #323231;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
-                <p style="font-size: 14px; color: #323231;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
-            </div>
-            <img src="{% static 'img/image 277.png' %}" style="object-fit: contain;">
-        </div>
-        <div class="d-flex justify-content-between align-items-center" style="margin-top: 16px;">
-            <div class="d-flex align-items-center">
-                <a href="{% url 'card-news' %}" class="d-flex align-items-center">
-            <span style="font-size: 16px; color: #968577; font-weight: 600; margin-right: 10px;" class="podrobnee-hover">Подробнее</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="#968577"/>
-</svg>
-                </a>
-                </div>
-            <span style="font-size: 14px; color: #323231B2;">7 октября 2023 г.</span>
-        </div>
-    </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card card-news">
-        <div class="d-flex justify-content-between align-items-start card-news-mob" style="gap: 21px;">
-            <div>
-                <p style="font-size: 16px; font-weight: 600; color: #323231;">Косметолог дала советы по выбору уходовых средств после 30 лет</p>
-                <p style="font-size: 14px; color: #323231;">Специалист отметила, что преждевременному старению способствуют вредные факторы внешней среды, с возрастом на коже могут образовываться пигментные пятна, которые зрительно выдают, сколько человеку лет. Есть несколько способов, как с ними бороться. Один из таких — отшелушивание клеток кожи, которые «забиты» пигментом...</p>
-            </div>
-            <img src="{% static 'img/image 277.png' %}" style="object-fit: contain;">
-        </div>
-        <div class="d-flex justify-content-between align-items-center" style="margin-top: 16px;">
-            <div class="d-flex align-items-center">
-                <a href="{% url 'card-news' %}" class="d-flex align-items-center">
-            <span style="font-size: 16px; color: #968577; font-weight: 600; margin-right: 10px;" class="podrobnee-hover">Подробнее</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
-<path d="M0.625003 8.93333C0.267276 9.14044 0.145173 9.59832 0.352278 9.95605C0.559383 10.3138 1.01727 10.4359 1.375 10.2288L0.625003 8.93333ZM12.3663 3.61207C12.4728 3.21268 12.2354 2.80256 11.836 2.69606L5.32746 0.960447C4.92806 0.853941 4.51795 1.09138 4.41144 1.49077C4.30494 1.89017 4.54237 2.30028 4.94177 2.40679L10.7271 3.94955L9.18437 9.73492C9.07787 10.1343 9.3153 10.5444 9.7147 10.6509C10.1141 10.7574 10.5242 10.52 10.6307 10.1206L12.3663 3.61207ZM1 9.58105L1.375 10.2288L12.0182 4.06695L11.6432 3.41923L11.2682 2.77151L0.625003 8.93333L1 9.58105Z" fill="#968577"/>
-</svg>
-                </a>
-                </div>
-            <span style="font-size: 14px; color: #323231B2;">7 октября 2023 г.</span>
-        </div>
-    </div>
-            <div class="d-flex justify-content-end end-btn-news-news-mob" style="margin-top: 64px;">
-
-                <a href="#" class="more-news-btn">Больше новостей</a>
-            </div>
-        </div>
     </div>
 
 </section>
