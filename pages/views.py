@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Contact, SpecialOffer, Certificate, About, Subscription, Specialist, News, Licenses
+from .models import Contact, SpecialOffer, Certificate, About, Subscription, Specialist, News, Licenses, Vacancies
 
 
 def home(request):
@@ -75,7 +75,11 @@ def about(request):
 
 
 def vacancies(request):
-    return render(request, 'vacancies.html')
+    vacancies_info = Vacancies.objects.all()
+
+    return render(request, 'vacancies.html', {
+        'vacancies_info': vacancies_info
+    })
 
 
 def news(request):

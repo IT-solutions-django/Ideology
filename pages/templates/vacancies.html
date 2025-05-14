@@ -171,41 +171,26 @@
         </div>
     </div>
     <div class="d-flex row" style="margin-top: 50px; row-gap: 20px;">
+        {% for vacan in vacancies_info %}
         <div class="col-md-4">
             <div class="card-vacancies">
-            <p style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;">МАССАЖИСТ</p>
+            <p style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;" class="clamp-stock-offer-1">{{ vacan.name }}</p>
             <p style="font-size: 16px; font-weight: 600; margin-top: 30px; color: #2F2F2F;">Требования к работнку:</p>
-            <span style="font-size: 16px; color: #2F2F2F;">Опыт: 2-3 года</span>
-            <p style="font-size: 16px; color: #2F2F2F;">Профильное образование</p>
-            <p style="font-size: 16px; color: #6E6E6E;">Для получения более подробной информации о вакансии, пожалуйста, свяжитесь с нами</p>
+                {% for req in vacan.requirement.all|slice:"4" %}
+            <p style="font-size: 16px; color: #2F2F2F; margin-bottom: 0;" class="clamp-stock-offer-1">{{ req.name }}</p>
+                {% endfor %}
+            <p style="font-size: 16px; color: #6E6E6E; margin-top: 20px;">Для получения более подробной информации о вакансии, пожалуйста, свяжитесь с нами</p>
             <div class="d-flex align-items-center" style="margin-top: 30px; gap: 10px;">
                 <a id="otklik-vacancies" class="d-flex align-items-center" style="gap: 10px; cursor: pointer;">
                 <span style="font-size: 16px; color: #968577; font-weight: 600;" class="podrobnee-hover">Откликнуться</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+                <svg class="podrobnee-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
 <path d="M0.625003 8.93309C0.267276 9.14019 0.145173 9.59808 0.352278 9.95581C0.559383 10.3135 1.01727 10.4356 1.375 10.2285L0.625003 8.93309ZM12.3663 3.61183C12.4728 3.21243 12.2354 2.80232 11.836 2.69581L5.32746 0.960202C4.92806 0.853697 4.51795 1.09113 4.41144 1.49053C4.30494 1.88992 4.54237 2.30004 4.94177 2.40654L10.7271 3.94931L9.18437 9.73468C9.07787 10.1341 9.3153 10.5442 9.7147 10.6507C10.1141 10.7572 10.5242 10.5198 10.6307 10.1204L12.3663 3.61183ZM1 9.58081L1.375 10.2285L12.0182 4.06671L11.6432 3.41898L11.2682 2.77126L0.625003 8.93309L1 9.58081Z" fill="#968577"/>
 </svg>
                 </a>
             </div>
                 </div>
         </div>
-
-        <div class="col-md-4">
-            <div class="card-vacancies">
-            <p style="font-size: 22px; font-family: 'Prata', serif; color: #2F2F2F;">КОСМЕТИК - ЭСТЕТИСТ</p>
-            <p style="font-size: 16px; font-weight: 600; margin-top: 30px; color: #2F2F2F;">Требования к работнку:</p>
-            <span style="font-size: 16px; color: #2F2F2F;">Опыт: 2-3 года</span>
-            <p style="font-size: 16px; color: #2F2F2F;">Профильное образование</p>
-            <p style="font-size: 16px; color: #6E6E6E;">Для получения более подробной информации о вакансии, пожалуйста, свяжитесь с нами</p>
-            <div class="d-flex align-items-center" style="margin-top: 30px; gap: 10px;">
-                <a id="otklik-vacancies" class="d-flex align-items-center" style="gap: 10px; cursor: pointer;">
-                <span style="font-size: 16px; color: #968577; font-weight: 600;" class="podrobnee-hover">Откликнуться</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
-<path d="M0.625003 8.93309C0.267276 9.14019 0.145173 9.59808 0.352278 9.95581C0.559383 10.3135 1.01727 10.4356 1.375 10.2285L0.625003 8.93309ZM12.3663 3.61183C12.4728 3.21243 12.2354 2.80232 11.836 2.69581L5.32746 0.960202C4.92806 0.853697 4.51795 1.09113 4.41144 1.49053C4.30494 1.88992 4.54237 2.30004 4.94177 2.40654L10.7271 3.94931L9.18437 9.73468C9.07787 10.1341 9.3153 10.5442 9.7147 10.6507C10.1141 10.7572 10.5242 10.5198 10.6307 10.1204L12.3663 3.61183ZM1 9.58081L1.375 10.2285L12.0182 4.06671L11.6432 3.41898L11.2682 2.77126L0.625003 8.93309L1 9.58081Z" fill="#968577"/>
-</svg>
-                </a>
-            </div>
-                </div>
-        </div>
+        {% endfor %}
 
 
 
@@ -260,7 +245,7 @@
         </div>
 
         <!-- Кнопка отправки -->
-        <button type="submit" class="btn-feedback">Отправить</button>
+        <button type="submit" class="btn-feedback">Оставить зявку</button>
     </form>
 </div>
     </div>
@@ -388,7 +373,7 @@
 
         <!-- Кнопка отправки -->
           <div class="d-flex align-items-center mt-5" style="gap: 20px;">
-        <button type="submit" class="btn-feedback" style="margin-top: 0;">Отправить</button>
+        <button type="submit" class="btn-feedback" style="margin-top: 0;">Оставить зявку</button>
           <a href="https://wa.me/79147312555" target="_blank" class="d-flex align-items-center"><img src="{% static 'img/socials.png' %}" width="54" height="54" class="main-wa-mob wa-hover"></a>
           </div>
           <p style="font-size: 14px; color: #787878; margin-top: 10px; width: 300px;">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</p>

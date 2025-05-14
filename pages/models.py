@@ -7,6 +7,10 @@ class SpecialOffer(models.Model):
     main_desc = models.CharField(max_length=150, verbose_name='Главное описание')
     desc = models.TextField(verbose_name='Описание')
 
+    class Meta:
+        verbose_name = 'Специальное предложение'
+        verbose_name_plural = 'Специальные предложения'
+
     def __str__(self):
         return self.name
 
@@ -18,6 +22,10 @@ class Certificate(models.Model):
     desc = models.TextField(verbose_name='Описание')
     photo = models.ImageField(upload_to='certificate', verbose_name='Фото')
 
+    class Meta:
+        verbose_name = 'Сертификат'
+        verbose_name_plural = 'Сертификаты'
+
     def __str__(self):
         return self.name
 
@@ -28,12 +36,20 @@ class About(models.Model):
     numb_3 = models.CharField(max_length=50, verbose_name='Довольных пациентов')
     numb_4 = models.CharField(max_length=50, verbose_name='Лицензированных аппаратов')
 
+    class Meta:
+        verbose_name = 'Блок о нас'
+        verbose_name_plural = 'Блок о нас'
+
     def __str__(self):
         return 'Информация о компании в блоке о нас'
 
 
 class DescSubscription(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
+
+    class Meta:
+        verbose_name = 'Содержимое абонемента'
+        verbose_name_plural = 'Содержимое абонемента'
 
     def __str__(self):
         return self.name
@@ -47,12 +63,20 @@ class Subscription(models.Model):
     new_price = models.DecimalField(max_digits=12, decimal_places=1, verbose_name='Новая цена')
     desc = models.ManyToManyField(DescSubscription, verbose_name='Список содержимого абонемента')
 
+    class Meta:
+        verbose_name = 'Абонемент'
+        verbose_name_plural = 'Абонементы'
+
     def __str__(self):
         return self.name
 
 
 class Scope(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
+
+    class Meta:
+        verbose_name = 'Сфера деятельности'
+        verbose_name_plural = 'Сфера деятельности'
 
     def __str__(self):
         return self.name
@@ -64,6 +88,10 @@ class Specialist(models.Model):
     photo = models.ImageField(upload_to='specialist', verbose_name='Фото')
     desc = models.TextField(verbose_name='Описание')
     scope = models.ForeignKey(Scope, on_delete=models.CASCADE, verbose_name='Сфера деятельности')
+
+    class Meta:
+        verbose_name = 'Специалист'
+        verbose_name_plural = 'Специалисты'
 
     def __str__(self):
         return self.name
@@ -77,6 +105,10 @@ class News(models.Model):
     main_desc = models.TextField(verbose_name='Вступительная часть новости')
     desc = models.TextField(verbose_name='Текст новости')
 
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
     def __str__(self):
         return self.name
 
@@ -88,13 +120,32 @@ class Contact(models.Model):
     schedule = models.CharField(max_length=150, verbose_name='График работы')
     address = models.TextField(verbose_name='Адрес')
 
+    class Meta:
+        verbose_name = 'Контактная информация'
+        verbose_name_plural = 'Контактная информация'
+
     def __str__(self):
         return self.address
 
 
+class RequirementsVacancies(models.Model):
+    name = models.CharField(max_length=150, verbose_name='Название')
+
+    class Meta:
+        verbose_name = 'Требование к должности'
+        verbose_name_plural = 'Требования к должности'
+
+    def __str__(self):
+        return self.name
+
+
 class Vacancies(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
-    requirement = models.CharField(max_length=150, verbose_name='Требование')
+    requirement = models.ManyToManyField(RequirementsVacancies, verbose_name='Требование')
+
+    class Meta:
+        verbose_name = 'Вакансия'
+        verbose_name_plural = 'Вакансии'
 
     def __str__(self):
         return self.name
@@ -104,6 +155,10 @@ class Licenses(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
     photo = models.ImageField(upload_to='licenses', verbose_name='Фото')
 
+    class Meta:
+        verbose_name = 'Лицензия'
+        verbose_name_plural = 'Лицензии'
+
     def __str__(self):
         return self.name
 
@@ -112,6 +167,10 @@ class ListProcedures(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
     price = models.DecimalField(max_digits=12, decimal_places=1, verbose_name='Цена')
 
+    class Meta:
+        verbose_name = 'Список/содержимое процедур'
+        verbose_name_plural = 'Список/содержимое процедур'
+
     def __str__(self):
         return self.name
 
@@ -119,6 +178,10 @@ class ListProcedures(models.Model):
 class Procedures(models.Model):
     procedure = models.ManyToManyField(ListProcedures, verbose_name='Процедуры')
     scope = models.ForeignKey(Scope, on_delete=models.CASCADE, verbose_name='Сфера деятельности')
+
+    class Meta:
+        verbose_name = 'Процедура'
+        verbose_name_plural = 'Процедуры'
 
     def __str__(self):
         return self.scope.name
