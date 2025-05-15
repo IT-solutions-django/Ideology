@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yvlzhw3s#$o$a_kq%qswp4-)(n*n%#r3gx_3__d8q7l8-v_u#-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['188.225.32.223']
+ALLOWED_HOSTS = ['ideologiya.com', 'www.ideologiya.com']
 
 
 # Application definition
@@ -80,6 +80,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://ideologiya.com']
 
 
 # Password validation
